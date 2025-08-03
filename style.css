@@ -511,13 +511,12 @@ ccl-slide h1:after
 #formation .carteFormation
 {
   background:var(--COLOR-BG-DARK) ;
-  padding:8px ;
+  padding:12px ;
   border-radius:8px ;
   max-width:700px ;
   font-size:.9rem ; 
   box-shadow:0 0 0 0 var(--COLOR-PRIMARY) ;
   transition:all .3s ;
-  
 }
 
 #formation .carteFormation:hover
@@ -567,7 +566,7 @@ ccl-slide h1:after
 #formation .carteFormation .listeTechnoFormation
 {
   height:fit-content ;
-  margin:15px 0 ;
+  margin:15px 0 5px 0;
   display:flex ;
   gap:5px ;
   flex-wrap:wrap ;

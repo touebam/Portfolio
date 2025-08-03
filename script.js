@@ -9,7 +9,7 @@ function init()
 
 function observeSlideChanges() 
 {
-    const navbarLinks=document.querySelectorAll('ccl-navbar .wrapper > *:not([event="undefined"])') ;
+    const navbarLinks=document.querySelectorAll('ccl-navbar .wrapper > *:not(.logo)') ;
     const slides=document.querySelectorAll('ccl-slide') ;
     
     const observer=new MutationObserver(() => 
@@ -35,7 +35,7 @@ function observeSlideChanges()
 function initNavbar()
 {
     const slideshow=document.querySelector('ccl-slideshow') ;
-    const navbarLinks=document.querySelectorAll('ccl-navbar .wrapper > *:not([event="undefined"])') ;
+    const navbarLinks=document.querySelectorAll('ccl-navbar .wrapper > *:not(.logo)') ;
     navbarLinks.forEach(function(link, i)
     {
         link.addEventListener('click', () => 
