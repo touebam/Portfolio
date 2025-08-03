@@ -4,6 +4,32 @@ function init()
 {
     initNavbar() ;
     initCompetences() ;
+    observeSlideChanges() ;
+}
+
+function observeSlideChanges() 
+{
+    const navbarLinks=document.querySelectorAll('ccl-navbar .wrapper > *:not([event="undefined"])') ;
+    const slides=document.querySelectorAll('ccl-slide') ;
+    
+    const observer=new MutationObserver(() => 
+    {
+        const activeLink=document.querySelector('ccl-navbar .active') ;
+        if (activeLink)
+            activeLink.classList.remove('active') ;
+
+        const newIndex=Array.from(slides).findIndex(slide => slide.classList.contains('active')) ;
+        const newLink=navbarLinks[newIndex] ;
+        newLink.classList.add('active') ;
+    });
+
+    slides.forEach(slide => 
+        observer.observe(slide, 
+        {
+            attributes: true,
+            attributeFilter: ['class']
+        })
+    );
 }
 
 function initNavbar()
@@ -15,10 +41,6 @@ function initNavbar()
         link.addEventListener('click', () => 
         {
             slideshow.showSlide(i) ;
-            const activeLink=document.querySelector('ccl-navbar .active') ;
-            if (activeLink)
-                activeLink.classList.remove('active') ;
-            link.classList.add('active') ;
         }) ;
 
     }) ;
@@ -95,6 +117,7 @@ function contactSubmit()
     {
         const value=getInputValue(customInput) ;
         const name=customInput.getAttribute('name') ;
+        console.log(name, value, form.querySelector(`input[type="hidden"][name="${name}"]`))
         form.querySelector(`input[type="hidden"][name="${name}"]`).value=value ;
     }) ;
 

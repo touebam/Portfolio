@@ -395,17 +395,15 @@
                             </div>
                             <ccl-input required name="subject" placeholder="Sujet"></ccl-input>
                             <ccl-input required name="message" type="textarea" placeholder="Message"></ccl-input>
-                            <ccl-button icon="fa-paper-plane" icon-position="right" event="contactSubmit">Envoyer</ccl-button>
+                            <ccl-button icon="fa-paper-plane" icon-position="right" event="contactSubmit()">Envoyer</ccl-button>
                             
                             <input type="hidden" name="name" />
                             <input type="hidden" name="email" />
                             <input type="hidden" name="subject" />
                             <input type="hidden" name="message" />
-                        </form>
-                        
+                        </form>  
                     </div>
                 </div>
-                
                 <div class="slideButtons">
                     <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
                 </div>
