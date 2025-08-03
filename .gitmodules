@@ -1,0 +1,3 @@
+[submodule "CC-Lib"]
+    path = CC-Lib
+    url = https://github.com/touebam/CC-Lib.git
