@@ -8,19 +8,28 @@ function init()
 
 function initNavbar()
 {
-    const slideshow=document.querySelector('ccl-slideshow')
+    const slideshow=document.querySelector('ccl-slideshow') ;
     const navbarLinks=document.querySelectorAll('ccl-navbar .wrapper > *:not([event="undefined"])') ;
     navbarLinks.forEach(function(link, i)
     {
-        console.log(link, i)
         link.addEventListener('click', () => slideshow.showSlide(i)) ;
     }) ;
     const collapsedContainerLinks=document.querySelectorAll('ccl-navbar .collapsedContainer > *:not(#navbarCloseButton)') ;
     collapsedContainerLinks.forEach(function(link, i)
     {
-        console.log(link, i)
-        link.addEventListener('click', () => slideshow.showSlide(i)) ;
+        link.addEventListener('click', () => 
+        {
+            slideshow.showSlide(i) ;
+            const navbar=document.querySelector('ccl-navbar') ;
+            navbar.closeCollapsed() ;
+        }) ;
+
     }) ;
+}
+function showSlide(id)
+{
+    const slideshow=document.querySelector('ccl-slideshow') ;
+    slideshow.showSlide(id) ;
 }
 
 function initCompetences()
@@ -67,4 +76,25 @@ function addCompetences(container, liste)
         label.innerHTML=competence.label ;
         container.append(newCompetence) ;
     }) ;
+}
+
+function contactSubmit()
+{
+    const form=document.getElementById("contactForm") ;
+
+    const listeCustomInputs=form.querySelectorAll('ccl-input') ;
+    listeCustomInputs.forEach(customInput =>
+    {
+        const value=getInputValue(customInput) ;
+        const name=customInput.getAttribute('name') ;
+        form.querySelector(`input[type="hidden"][name="${name}"]`).value=value ;
+    }) ;
+
+    form.submit() ;
+}
+
+function getInputValue(customInput) 
+{
+    const shadowInput=customInput.shadowRoot.querySelector("input, textarea") ;
+    return shadowInput?.value || "" ;
 }

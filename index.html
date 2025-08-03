@@ -6,19 +6,26 @@
     <title>Portfolio - Morgan Toueba</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a4699f4145.js" crossorigin="anonymous"></script>
+    
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png"/>
+    <link rel="manifest" href="assets/favicon/site.webmanifest"/>
 
     <link rel="stylesheet" href="CC-Lib/CCL.css">
     <script type='module' src='CC-Lib/CCL-navbar.mjs'></script>
     <script type='module' src='CC-Lib/CCL-slide.mjs'></script>
     <script type='module' src='CC-Lib/CCL-slideshow.mjs'></script>
     <script type='module' src='CC-Lib/CCL-button.mjs'></script>
+    <script type='module' src='CC-Lib/CCL-input.mjs'></script>
 
     <script src='float-icon.js'></script>
     <script src='script.js'></script>
 </head>
-<body>
+<body><!--https://touebam.github.io/Portfolio/-->
     <ccl-navbar items='[
-        {"type":"logo", "name":"Morgan Toueba", "fixed":true},
+        {"type":"logo", "name":"Morgan Toueba", "fixed":true, "href":"#"},
         [
             {"type": "link", "label": "Accueil"},
             {"type": "link", "label": "&#192; propos"},
@@ -32,6 +39,14 @@
         enter-duration=".6s" 
         exit-duration=".2s">
         <ccl-slide id="accueil">
+            <div class="background-icons">
+                <img src="assets/floating-icons/accueil1.png" class="floating-icon icon1" />
+                <img src="assets/floating-icons/accueil2.png" class="floating-icon icon2" />
+                <img src="assets/floating-icons/accueil3.png" class="floating-icon icon3" />
+                <img src="assets/floating-icons/accueil3.png" class="floating-icon icon4 blur" />
+                <img src="assets/floating-icons/accueil2.png" class="floating-icon icon5 blur" />
+                <img src="assets/floating-icons/accueil1.png" class="floating-icon icon6 blur" />
+            </div>
             <div class="wrapper">
                 <h1></h1>
                 <div class="mainContent">
@@ -43,18 +58,10 @@
                         <img class='profil' src="assets/images/photoMorgan.jpg" alt="Photo de profil Morgan">
                         <div class="imgBorder"></div>
                         <div class="links">
-                            <ccl-button size="medium" type="primary" icon="fa-brands fa-github" href=""></ccl-button>
-                            <ccl-button size="medium" type="primary" icon="fa-brands fa-linkedin-in" href=""></ccl-button>
+                            <ccl-button size="medium" type="primary" icon="fa-brands fa-github" href="https://github.com/touebam" target="_blank"></ccl-button>
+                            <ccl-button size="medium" type="primary" icon="fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/morgan-toueba-1aa38b372/" target="_blank"></ccl-button>
                         </div>
                     </div>
-                </div>
-                <div class="background-icons">
-                    <img src="assets/floating-icons/accueil1.png" class="floating-icon icon1" />
-                    <img src="assets/floating-icons/accueil2.png" class="floating-icon icon2" />
-                    <img src="assets/floating-icons/accueil3.png" class="floating-icon icon3" />
-                    <img src="assets/floating-icons/accueil3.png" class="floating-icon icon4 blur" />
-                    <img src="assets/floating-icons/accueil2.png" class="floating-icon icon5 blur" />
-                    <img src="assets/floating-icons/accueil1.png" class="floating-icon icon6 blur" />
                 </div>
                 <div class="slideButtons">
                     <img src="assets/images/fleche.png" alt="fleche pointant vers le bouton à propos">
@@ -63,20 +70,28 @@
             </div>
         </ccl-slide>
         <ccl-slide id="aPropos">
+            <div class="background-icons">
+                <img src="assets/floating-icons/html.webp" class="floating-icon icon2" />
+                <img src="assets/floating-icons/css.webp" class="floating-icon icon3" />
+                <img src="assets/floating-icons/js.png" class="floating-icon icon1" />
+                <img src="assets/floating-icons/css.webp" class="floating-icon icon4 blur" />
+                <img src="assets/floating-icons/html.webp" class="floating-icon icon5 blur" />
+                <img src="assets/floating-icons/js.png" class="floating-icon icon6 blur" />
+            </div>
             <div class="wrapper">
                 <h1></h1>
                 <div class="mainContent">
                     <div class="sectionLeft">
                         <h1>&#192; propos de moi.</h1>
-                        <p>Ma formation en BUT informatique m'a ouvert les yeux sur la richesse du développement web. Au-delà de la technique, j'ai découvert ma passion pour résoudre des problèmes réels et créer des expériences qui ont du sens pour les utilisateurs.</p>
+                        <p>Récemment diplômé d'un BUT informatique, je cherche à débuter ma carrière en tant que développeur front-end. Ce domaine m'attire particulièrement car il me permet de combiner créativité et technique pour proposer des sites web et des solutions numériques de qualité qui répondent aux besoins des utilisateurs.</p>
                         <div class="aProposButtons">
-                            <ccl-button type="secondary" icon="fa-paper-plane">Contactez-moi</ccl-button>
-                            <ccl-button type="secondary" icon="fa-file-arrow-down">Mon CV</ccl-button>
-                            <ccl-button type="secondary" icon="fa-brands fa-linkedin-in" href=""></ccl-button>
+                            <ccl-button type="secondary" icon="fa-paper-plane" event="showSlide(4)">Contactez-moi</ccl-button>
+                            <ccl-button type="secondary" icon="fa-file-arrow-down" href="assets/documents/CV Morgan Toueba.pdf" target="_blank">Mon CV</ccl-button>
+                            <ccl-button type="secondary" icon="fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/morgan-toueba-1aa38b372/" target="_blank"></ccl-button>
                         </div>
                     </div>
                     <div class="sectionRight">
-                        <h2 class="title">Mes compétences</h2>
+                        <h1 class="title">Mes compétences</h1>
                             <template id="competence">
                                 <div class="competence">
                                     <img src="assets/competences/html.svg" alt="logo html">
@@ -95,14 +110,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="background-icons">
-                    <img src="assets/floating-icons/html.webp" class="floating-icon icon2" />
-                    <img src="assets/floating-icons/css.webp" class="floating-icon icon3" />
-                    <img src="assets/floating-icons/js.png" class="floating-icon icon1" />
-                    <img src="assets/floating-icons/css.webp" class="floating-icon icon4 blur" />
-                    <img src="assets/floating-icons/html.webp" class="floating-icon icon5 blur" />
-                    <img src="assets/floating-icons/js.png" class="floating-icon icon6 blur" />
-                </div>
                 <div class="slideButtons">
                     <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
                     <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>Projets</ccl-button>
@@ -110,10 +117,17 @@
             </div>
         </ccl-slide>
         <ccl-slide id="projets">
+            <div class="background-icons">
+                <img src="assets/floating-icons/projet1.png" class="floating-icon icon2" />
+                <img src="assets/floating-icons/projet2.png" class="floating-icon icon3" />
+                <img src="assets/floating-icons/projet3.png" class="floating-icon icon1" />
+                <img src="assets/floating-icons/projet2.png" class="floating-icon icon4 blur" />
+                <img src="assets/floating-icons/projet1.png" class="floating-icon icon5 blur" />
+                <img src="assets/floating-icons/projet3.png" class="floating-icon icon6 blur" />
+            </div>
             <div class="wrapper">
                 <h1>Mes projets</h1>
                 <div class="mainContent">
-                    <!-- MES PROJETS : MARKED ET CCLIB en cours, marked design system, appexels, lovey puppy et terraforma pour le reste-->
                     <div class="carteProjet enCours">
                         <div class="carteHeader">
                             <div class="title">
@@ -133,8 +147,8 @@
                         <div class="carteBody">
                             <p class="description">Marked est une application personnelle développée pour organiser efficacement mes onglets en catégories. Ce projet m’a permis de m'introduire à React, TypeScript et de concevoir un design system complet.</p>
                             <div class="links">
-                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right">Consulter le projet</ccl-button>
-                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right">Consulter la maquette</ccl-button>
+                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right" href="https://marked-touebam.web.app/" target="_blank">Consulter le projet</ccl-button>
+                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right" href="https://www.figma.com/design/4zMwsTEQBEjA79aJUYWir4/Marked?node-id=0-1&p=f&t=KGKKiVst7s1bBndT-0" target="_blank">Consulter la maquette</ccl-button>
                             </div>
                         </div>
                     </div>
@@ -171,6 +185,7 @@
                                 <span class="techno css">CSS</span>
                                 <span class="techno html">HTML</span>
                                 <span class="techno php">PHP</span>
+                                <span class="techno threejs">Three.js</span>
                             </div>
                         </div>
                         <div class="carteBody">
@@ -222,14 +237,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="background-icons">
-                    <img src="assets/floating-icons/projet1.png" class="floating-icon icon2" />
-                    <img src="assets/floating-icons/projet2.png" class="floating-icon icon3" />
-                    <img src="assets/floating-icons/projet3.png" class="floating-icon icon1" />
-                    <img src="assets/floating-icons/projet2.png" class="floating-icon icon4 blur" />
-                    <img src="assets/floating-icons/projet1.png" class="floating-icon icon5 blur" />
-                    <img src="assets/floating-icons/projet3.png" class="floating-icon icon6 blur" />
-                </div>
                 <div class="slideButtons">
                     <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
                     <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>Formations & Expériences</ccl-button>
@@ -237,33 +244,168 @@
             </div>
         </ccl-slide>
         <ccl-slide id="formation">
+            <div class="background-icons">
+                <img src="assets/floating-icons/diplome1.png" class="floating-icon icon2" />
+                <img src="assets/floating-icons/diplome2.png" class="floating-icon icon3" />
+                <img src="assets/floating-icons/diplome3.png" class="floating-icon icon1" />
+                <img src="assets/floating-icons/diplome2.png" class="floating-icon icon4 blur" />
+                <img src="assets/floating-icons/diplome1.png" class="floating-icon icon5 blur" />
+                <img src="assets/floating-icons/diplome3.png" class="floating-icon icon6 blur" />
+            </div>
             <div class="wrapper">
-                <h1>Formations & Expériences</h1>
-                <div class="background-icons">
-                    <img src="assets/floating-icons/diplome1.png" class="floating-icon icon2" />
-                    <img src="assets/floating-icons/diplome2.png" class="floating-icon icon3" />
-                    <img src="assets/floating-icons/diplome3.png" class="floating-icon icon1" />
-                    <img src="assets/floating-icons/diplome2.png" class="floating-icon icon4 blur" />
-                    <img src="assets/floating-icons/diplome1.png" class="floating-icon icon5 blur" />
-                    <img src="assets/floating-icons/diplome3.png" class="floating-icon icon6 blur" />
+                <div class="experienceContent">
+                    <h1>Expériences</h1>
+                    <div class="carteFormation">
+                        <div class="header">
+                            <div class="infoFormation">
+                                <h2>Développeur Full-Stack - Alternance</h2>
+                                <p class="ecole">MVP</p>
+                                <p class="localisation">Grenoble, Isère</p>
+                            </div>
+                            <span class="duree">2024 - 2025</span>
+                        </div>
+                        <p class="description">Développement d'outils internes et d'applications web complètes dans un environnement agile. Participation à toutes les phases du développement, de l'analyse des besoins à la mise en production, en passant par la conception et les tests.</p>
+                        <h3>Technologies utilisées :</h3>
+                        <div class="listeTechnoFormation">
+                            <span class="techno sql">SQL</span>
+                            <span class="techno php">PHP</span>
+                            <span class="techno html">HTML</span>
+                            <span class="techno css">CSS</span>
+                            <span class="techno js">JS</span>
+                        </div>
+                    </div>
                 </div>
+                <div class="formationContent">
+                    <h1>Formations</h1>
+                    <div class="carteFormation">
+                        <div class="header">
+                            <div class="infoFormation">
+                                <h2>BUT Informatique - Parcours réalisation d'application</h2>
+                                <p class="ecole">IUT2 Grenoble</p>
+                                <p class="localisation">Grenoble, Isère</p>
+                            </div>
+                            <span class="duree">2022-2025</span>
+                        </div>
+                        <p class="description">Formation complète en informatique couvrant le développement logiciel, les bases de données, les réseaux et la gestion de projet. Spécialisation en développement d'applications avec une approche pratique et des projets concrets.</p>
+                        <h3>Technologies utilisées :</h3>
+                        <div class="listeTechnoFormation">
+                            <span class="techno react">Programmation orientée objet</span>
+                            <span class="techno typescript">Développement web</span>
+                            <span class="techno mongodb">Bases de données</span>
+                            <span class="techno fullstack">Algorithmique</span>
+                            <span class="techno figma">Gestion de projet</span>
+                        </div>
+                    </div>
+                    <div class="carteFormation">
+                        <div class="header">
+                            <div class="infoFormation">
+                                <h2>BTS CPI - Conception de Produits Industriels</h2>
+                                <p class="ecole">Lycée Arbez Carme</p>
+                                <p class="localisation">Bellignat, Ain</p>
+                            </div>
+                            <span class="duree">2020 - 2022</span>
+                        </div>
+                        <p class="description">Formation en conception et développement de produits industriels. Cette expérience m'a apporté une approche méthodique de la résolution de problèmes et une sensibilité au design, compétences que j'applique aujourd'hui dans le développement web.</p>
+                        <h3>Compétences transférables :</h3>
+                        <div class="listeTechnoFormation">
+                            <span class="techno designsystem">Méthodologie de projet</span>
+                            <span class="techno js">Analyse fonctionnelle</span>
+                            <span class="techno css">Esprit critique</span>
+                        </div>
+                    </div>
+                    <div class="carteFormation">
+                        <div class="header">
+                            <div class="infoFormation">
+                                <h2>Bac STI2D - Sciences et Technologies Industrielles</h2>
+                                <p class="ecole">Lycée Arbez Carme</p>
+                                <p class="localisation">Bellignat, Ain</p>
+                            </div>
+                            <span class="duree">2017 - 2019</span>
+                        </div>
+                        <p class="description">Spécialité Systèmes d'Information et Numérique (SIN). Première approche du développement et des systèmes informatiques qui m'a donné envie de poursuivre dans cette voie.</p>
+                        <h3>Premières bases :</h3>
+                        <div class="listeTechnoFormation">
+                            <span class="techno css">Programmation Web</span>
+                            <span class="techno html">Logique de programmation</span>
+                            <span class="techno php">Systèmes numériques</span>
+                            <span class="techno sql">Systèmes embarqués</span>
+                        </div>
+                    </div>
+                </div>
+
+                
                 <div class="slideButtons">
                     <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
                     <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>Contact</ccl-button>
                 </div>
             </div>
         </ccl-slide>
-        <ccl-slide id="formation">
+        <ccl-slide id="contact">
+            <div class="background-icons">
+                <img src="assets/floating-icons/contact1.png" class="floating-icon icon2" />
+                <img src="assets/floating-icons/contact2.png" class="floating-icon icon3" />
+                <img src="assets/floating-icons/contact3.png" class="floating-icon icon1" />
+                <img src="assets/floating-icons/contact2.png" class="floating-icon icon4 blur" />
+                <img src="assets/floating-icons/contact1.png" class="floating-icon icon5 blur" />
+                <img src="assets/floating-icons/contact3.png" class="floating-icon icon6 blur" />
+            </div>
             <div class="wrapper">
-                <h1>Contact</h1>
-                <div class="background-icons">
-                    <img src="assets/floating-icons/contact1.png" class="floating-icon icon2" />
-                    <img src="assets/floating-icons/contact2.png" class="floating-icon icon3" />
-                    <img src="assets/floating-icons/contact3.png" class="floating-icon icon1" />
-                    <img src="assets/floating-icons/contact2.png" class="floating-icon icon4 blur" />
-                    <img src="assets/floating-icons/contact1.png" class="floating-icon icon5 blur" />
-                    <img src="assets/floating-icons/contact3.png" class="floating-icon icon6 blur" />
+                <h1></h1>
+                <div class="mainContent">
+                    <div class="sectionLeft">
+                        <h1>Parlons de votre projet</h1>
+                        <p>Que ce soit pour discuter d'une opportunité, échanger sur un projet ou simplement faire connaissance, je serais ravi d'échanger avec vous !</p>
+                        
+                        <div class="carteContactContainer">
+                            <div class="carteContact">
+                                <i class="fa-solid fa-at"></i>
+                                <div class="contactContainer">
+                                    <p class="title">E-mail</p>
+                                    <p class="content">touebamorgan@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="carteContact">
+                                <i class="fa-solid fa-phone"></i>
+                                <div class="contactContainer">
+                                    <p class="title">Téléphone</p>
+                                    <p class="content">+33 6 43 55 94 80</p>
+                                </div>
+                            </div>
+                            <div class="carteContact">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="contactContainer">
+                                    <p class="title">Localisation</p>
+                                    <p class="content">Grenoble, Isère</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <ccl-button size="medium" type="secondary" icon="fa-brands fa-github" href="https://github.com/touebam" target="_blank"></ccl-button>
+                            <ccl-button size="medium" type="secondary" icon="fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/morgan-toueba-1aa38b372/" target="_blank"></ccl-button>
+                        </div>
+                    </div>
+
+                    <div class="sectionRight">
+                        <h1>Envoyez-moi un message</h1>
+                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="4b78836e-9d3c-42c3-a852-32952720c9f3">
+                            <div class="infoContact">
+                                <ccl-input required name="name" placeholder="Nom" icon="fa-user"></ccl-input>
+                                <ccl-input required name="email" type="mail" placeholder="E-mail" icon="fa-at"></ccl-input>
+                            </div>
+                            <ccl-input required name="subject" placeholder="Sujet"></ccl-input>
+                            <ccl-input required name="message" type="textarea" placeholder="Message"></ccl-input>
+                            <ccl-button icon="fa-paper-plane" icon-position="right" event="contactSubmit">Envoyer</ccl-button>
+                            
+                            <input type="hidden" name="name" />
+                            <input type="hidden" name="email" />
+                            <input type="hidden" name="subject" />
+                            <input type="hidden" name="message" />
+                        </form>
+                        
+                    </div>
                 </div>
+                
                 <div class="slideButtons">
                     <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
                 </div>

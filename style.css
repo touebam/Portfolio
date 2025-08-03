@@ -18,6 +18,34 @@ body
 
 ccl-navbar
 {
+  box-shadow:2px 0 2px 2px var(--COLOR-PRIMARY) ;
+}
+
+ccl-navbar ccl-button
+{
+  position:relative ;
+  overflow:hidden ;
+}
+ccl-navbar ccl-button::after
+{
+  content:'' ;
+  background:var(--COLOR-PRIMARY) ;
+  position:absolute ;
+  bottom:0 ;
+  left:0 ;
+  width:70% ;
+  height:2px ;
+  transform:translateX(-100%) ;
+  transition:all .5s ;
+}
+ccl-navbar ccl-button:hover::after,
+ccl-navbar ccl-button.active::after
+{
+  transform:translateX(0) ;
+}
+ccl-navbar ccl-button.active
+{
+  color:var(--COLOR-PRIMARY) ;
 }
 
 ccl-slideshow
@@ -27,13 +55,12 @@ ccl-slideshow
 
 ccl-slide
 {
-  overflow:hidden auto ;
-  scrollbar-width:auto ;
-  scrollbar-color:var(--COLOR-BG-LIGHT) var(--COLOR-BG) ;
+  overflow:hidden ;
 }
 ccl-slide h1
 {
-  font-size:3rem ;
+  font-size:2.5rem ;
+  width:fit-content ;
 }
 ccl-slide .wrapper
 {
@@ -69,7 +96,7 @@ ccl-slide .wrapper
 }
 
 .background-icons {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -103,15 +130,15 @@ ccl-slide .wrapper
   opacity: 0.5;
 }
 
-#aPropos h2
+ccl-slide .wrapper
 {
-  width:fit-content ;
-  padding:2px 4px;
-  border-radius:4px 0 0 4px ;
-  background:linear-gradient(to right, var(--COLOR-PRIMARY), rgba(0, 0, 0, 0)) ;
+  overflow:hidden auto ;
+  scrollbar-width:auto ;
+  scrollbar-color:var(--COLOR-BG-LIGHT) var(--COLOR-BG) ;
 }
 #accueil .mainContent,
-#aPropos .mainContent
+#aPropos .mainContent,
+#contact .mainContent
 {
   display:flex ; 
   width:80% ;
@@ -121,7 +148,8 @@ ccl-slide .wrapper
 }
 
 #accueil .mainContent .sectionLeft,
-#aPropos .mainContent .sectionLeft
+#aPropos .mainContent .sectionLeft,
+#contact .mainContent .sectionLeft
 {
   width:450px ;
   display:flex ;
@@ -130,6 +158,14 @@ ccl-slide .wrapper
   gap:24px ;
 }
 
+#aPropos .mainContent
+{
+  align-items:flex-start ;
+}
+#aPropos .mainContent .sectionRight h1
+{
+  margin-bottom:8px ;
+}
 #aPropos .aProposButtons
 {
   display:flex ;
@@ -272,6 +308,11 @@ ccl-slide h1:after
   position:relative ;
   display:flex ;
   flex-direction:column ;
+  transition:all .3s ;
+  box-shadow:4px 4px 0 0 var(--COLOR-PRIMARY) ;
+}
+#projets .mainContent .carteProjet:hover
+{
   box-shadow:4px 4px 0 0 var(--COLOR-PRIMARY) ;
 }
 #projets .mainContent .carteProjet.enCours:after
@@ -387,9 +428,145 @@ ccl-slide h1:after
 {
   background:rgb(170, 233, 234) ;
 }
+.sql
+{
+  background:rgb(170, 189, 234) ;
+}
 .api
 {
   background:rgb(170, 189, 234) ;
+}
+.threejs
+{
+  background:rgb(170, 189, 234) ;
+}
+
+#contact .carteContact
+{
+  display:flex ;
+  align-items:center ;
+  gap:8px ;
+}
+#contact ccl-input
+{
+  font-size:1rem ;
+}
+#contact .carteContact i
+{
+  display:flex ;
+  align-items:center ;
+  justify-content:center ;
+  background:var(--COLOR-PRIMARY) ;
+  height:40px ;
+  aspect-ratio:1 ;
+  border-radius:8px ;
+  transition:all .3s ;
+}
+#contact form
+{
+  margin-top:24px ;
+  display:flex ;
+  flex-direction:column ;
+  align-items:end ;
+  gap:12px ;
+}
+#contact form > ccl-input,
+#contact form div.infoContact
+{
+  width:100% ;
+}
+#contact .infoContact
+{
+  display:flex ;
+  gap:12px ;
+
+}
+#contact .links
+{
+  display:flex ;
+  gap:8px ; 
+}
+#contact .infoContact ccl-input
+{
+  flex-grow:1 ;
+}
+#contact .carteContact .content
+{
+  font-size:.9rem ;
+  color:var(--COLOR-TEXT-LIGHT) ;
+}
+
+#formation .carteFormation
+{
+  background:var(--COLOR-BG-DARK) ;
+  padding:8px ;
+  border-radius:8px ;
+  max-width:700px ;
+  font-size:.9rem ; 
+  box-shadow:0 0 0 0 var(--COLOR-PRIMARY) ;
+  transition:all .3s ;
+  
+}
+
+#formation .carteFormation:hover
+{
+  box-shadow:4px 4px 0 0 var(--COLOR-PRIMARY) ;
+}
+#formation .carteFormation .header
+{
+  display:flex ;
+  justify-content:space-between ;
+  flex-wrap:wrap ;
+  gap:12px ;
+}
+#formation h1
+{
+  margin-top:36px ; 
+}
+
+#formation .experienceContent, 
+#formation .formationContent
+{
+  display:flex ;
+  flex-direction:column ;
+  gap:24px ;
+}
+#formation .carteFormation .ecole
+{
+  color:var(--COLOR-PRIMARY) ;
+  font-weight:bold ;
+}
+
+#formation .carteFormation .duree
+{
+  background:var(--COLOR-PRIMARY) ;
+  font-weight:bold ;
+  height:fit-content ;
+  width:fit-content ;
+  padding:6px 10px ;
+  border-radius:18px ;
+}
+#formation .carteFormation .description
+{
+  margin:20px 0 ;
+  color:var(--COLOR-TEXT-LIGHT) ;
+}
+
+#formation .carteFormation .listeTechnoFormation
+{
+  height:fit-content ;
+  margin:15px 0 ;
+  display:flex ;
+  gap:5px ;
+  flex-wrap:wrap ;
+}
+#formation .carteFormation .listeTechnoFormation .techno
+{
+  border:2px solid var(--COLOR-BORDER) ;
+  color:var(--COLOR-TEXT-LIGHT) ;
+  background:transparent ;
+  padding:4px 12px ;
+  border-radius:15px ;
 }
 
 @media (max-width: 600px) {
@@ -403,5 +580,17 @@ ccl-slide h1:after
   #accueil .mainContent .sectionRight
   {
     --TAILLE-IMAGE-PROFIL:250px ;
+  }
+  #contact .carteContact:first-child i
+  {
+    border-radius:8px 8px 0 0 ;
+  }
+  #contact .carteContact i
+  {
+    border-radius:0 ;
+  }
+  #contact .carteContact:last-child i
+  {
+    border-radius:0 0 8px 8px ;
   }
 }
