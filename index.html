@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Morgan Toueba</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a4699f4145.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="CC-Lib/CCL.css">
+    <script type='module' src='CC-Lib/CCL-navbar.mjs'></script>
+    <script type='module' src='CC-Lib/CCL-slide.mjs'></script>
+    <script type='module' src='CC-Lib/CCL-slideshow.mjs'></script>
+    <script type='module' src='CC-Lib/CCL-button.mjs'></script>
+
+    <script src='float-icon.js'></script>
+    <script src='script.js'></script>
+</head>
+<body>
+    <ccl-navbar items='[
+        {"type":"logo", "name":"Morgan Toueba", "fixed":true},
+        [
+            {"type": "link", "label": "Accueil"},
+            {"type": "link", "label": "&#192; propos"},
+            {"type": "link", "label": "Projets"},
+            {"type": "link", "label": "Formations & Expériences"},
+            {"type": "link", "label": "Contact"}
+        ]
+    ]'></ccl-navbar>
+    <ccl-slideshow 
+        animations="opacity slide-up" 
+        enter-duration=".6s" 
+        exit-duration=".2s">
+        <ccl-slide id="accueil">
+            <div class="wrapper">
+                <h1></h1>
+                <div class="mainContent">
+                    <div class="sectionLeft">
+                        <h1>Morgan Toueba</h1>
+                        <p><b>Développeur front-end junior</b>, je suis passionné par les technologies du web et animé par l’envie de créer des interfaces modernes, accessibles et performantes. Aujourd’hui, je cherche à mettre mes compétences au service d’une équipe dynamique et innovante.</p>
+                    </div>
+                    <div class="sectionRight">
+                        <img class='profil' src="assets/images/photoMorgan.jpg" alt="Photo de profil Morgan">
+                        <div class="imgBorder"></div>
+                        <div class="links">
+                            <ccl-button size="medium" type="primary" icon="fa-brands fa-github" href=""></ccl-button>
+                            <ccl-button size="medium" type="primary" icon="fa-brands fa-linkedin-in" href=""></ccl-button>
+                        </div>
+                    </div>
+                </div>
+                <div class="background-icons">
+                    <img src="assets/floating-icons/accueil1.png" class="floating-icon icon1" />
+                    <img src="assets/floating-icons/accueil2.png" class="floating-icon icon2" />
+                    <img src="assets/floating-icons/accueil3.png" class="floating-icon icon3" />
+                    <img src="assets/floating-icons/accueil3.png" class="floating-icon icon4 blur" />
+                    <img src="assets/floating-icons/accueil2.png" class="floating-icon icon5 blur" />
+                    <img src="assets/floating-icons/accueil1.png" class="floating-icon icon6 blur" />
+                </div>
+                <div class="slideButtons">
+                    <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>&#192; propos</ccl-button>
+                </div>
+            </div>
+        </ccl-slide>
+        <ccl-slide id="aPropos">
+            <div class="wrapper">
+                <h1>&#192; propos de moi.</h1>
+                <div class="mainContent">
+                    <p>Après une formation en intégration web, j’ai confirmé ce qui me motive le plus : concevoir, tester, améliorer des expériences numériques. J’aspire à rejoindre une entreprise où je pourrai apprendre, collaborer, et contribuer avec créativité.</p>
+                    <div class="aProposButtons">
+                        <ccl-button type="secondary" icon="fa-paper-plane">Contactez-moi</ccl-button>
+                        <ccl-button type="secondary" icon="fa-file-arrow-down">Mon CV</ccl-button>
+                        <ccl-button type="secondary" icon="fa-brands fa-linkedin-in" href=""></ccl-button>
+                    </div>
+                    <p class="title">Mes compétences</p>
+                    <div class="competences">
+                        <template id="competence">
+                            <div class="competence">
+                                <img src="assets/competences/html.svg" alt="logo html">
+                                <p class="label">HTML</p>
+                                <span></span>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <div class="background-icons">
+                    <img src="assets/floating-icons/html.webp" class="floating-icon icon2" />
+                    <img src="assets/floating-icons/css.webp" class="floating-icon icon3" />
+                    <img src="assets/floating-icons/js.png" class="floating-icon icon1" />
+                    <img src="assets/floating-icons/css.webp" class="floating-icon icon4 blur" />
+                    <img src="assets/floating-icons/html.webp" class="floating-icon icon5 blur" />
+                    <img src="assets/floating-icons/js.png" class="floating-icon icon6 blur" />
+                </div>
+                <div class="slideButtons">
+                    <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
+                    <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>Projets</ccl-button>
+                </div>
+            </div>
+        </ccl-slide>
+        <ccl-slide id="projets">
+            <div class="wrapper">
+                <h1>Mes projets</h1>
+                <div class="background-icons">
+                    <img src="assets/floating-icons/projet1.png" class="floating-icon icon2" />
+                    <img src="assets/floating-icons/projet2.png" class="floating-icon icon3" />
+                    <img src="assets/floating-icons/projet3.png" class="floating-icon icon1" />
+                    <img src="assets/floating-icons/projet2.png" class="floating-icon icon4 blur" />
+                    <img src="assets/floating-icons/projet1.png" class="floating-icon icon5 blur" />
+                    <img src="assets/floating-icons/projet3.png" class="floating-icon icon6 blur" />
+                </div>
+                <div class="slideButtons">
+                    <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
+                    <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>Formations & Expériences</ccl-button>
+                </div>
+            </div>
+        </ccl-slide>
+        <ccl-slide id="formation">
+            <div class="wrapper">
+                <h1>Formations & Expériences</h1>
+                <div class="background-icons">
+                    <img src="assets/floating-icons/diplome1.png" class="floating-icon icon2" />
+                    <img src="assets/floating-icons/diplome2.png" class="floating-icon icon3" />
+                    <img src="assets/floating-icons/diplome3.png" class="floating-icon icon1" />
+                    <img src="assets/floating-icons/diplome2.png" class="floating-icon icon4 blur" />
+                    <img src="assets/floating-icons/diplome1.png" class="floating-icon icon5 blur" />
+                    <img src="assets/floating-icons/diplome3.png" class="floating-icon icon6 blur" />
+                </div>
+                <div class="slideButtons">
+                    <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
+                    <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>Contact</ccl-button>
+                </div>
+            </div>
+        </ccl-slide>
+        <ccl-slide id="formation">
+            <div class="wrapper">
+                <h1>Contact</h1>
+                <div class="background-icons">
+                    <img src="assets/floating-icons/contact1.png" class="floating-icon icon2" />
+                    <img src="assets/floating-icons/contact2.png" class="floating-icon icon3" />
+                    <img src="assets/floating-icons/contact3.png" class="floating-icon icon1" />
+                    <img src="assets/floating-icons/contact2.png" class="floating-icon icon4 blur" />
+                    <img src="assets/floating-icons/contact1.png" class="floating-icon icon5 blur" />
+                    <img src="assets/floating-icons/contact3.png" class="floating-icon icon6 blur" />
+                </div>
+                <div class="slideButtons">
+                    <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
+                </div>
+            </div>
+        </ccl-slide>
+
+    </ccl-slideshow>
+</body>
+</html>
