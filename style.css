@@ -27,10 +27,18 @@ ccl-slideshow
 
 ccl-slide
 {
+  overflow:hidden auto ;
+  scrollbar-width:auto ;
+  scrollbar-color:var(--COLOR-BG-LIGHT) var(--COLOR-BG) ;
+}
+ccl-slide h1
+{
+  font-size:3rem ;
 }
 ccl-slide .wrapper
 {
     padding:12px ;
+    padding-bottom:0 ;
     width:100% ;
     height:100% ;
     display:flex ;
@@ -41,9 +49,23 @@ ccl-slide .wrapper
 
 .slideButtons
 {
-    display:flex ;
-    justify-content:space-between ;
-    width:fit-content ;
+  bottom:5px ;
+  display:flex ;
+  justify-content:space-between ;
+  width:fit-content ;
+  position:sticky ;
+  background-color:var(--COLOR-BG) ;
+  border-radius:8px ;
+  padding:4px ;
+  z-index:9;
+}
+.slideButtons img
+{
+  position:absolute ;
+  height:80px ;
+  transform:rotateZ(136deg) ;
+  top:-120px ;
+  left:-40px ;
 }
 
 .background-icons {
@@ -81,7 +103,15 @@ ccl-slide .wrapper
   opacity: 0.5;
 }
 
-#accueil .mainContent
+#aPropos h2
+{
+  width:fit-content ;
+  padding:2px 4px;
+  border-radius:4px 0 0 4px ;
+  background:linear-gradient(to right, var(--COLOR-PRIMARY), rgba(0, 0, 0, 0)) ;
+}
+#accueil .mainContent,
+#aPropos .mainContent
 {
   display:flex ; 
   width:80% ;
@@ -90,7 +120,8 @@ ccl-slide .wrapper
   justify-content:center ;
 }
 
-#accueil .mainContent .sectionLeft
+#accueil .mainContent .sectionLeft,
+#aPropos .mainContent .sectionLeft
 {
   width:450px ;
   display:flex ;
@@ -99,6 +130,11 @@ ccl-slide .wrapper
   gap:24px ;
 }
 
+#aPropos .aProposButtons
+{
+  display:flex ;
+  gap:12px ;
+}
 #accueil .mainContent .sectionLeft b
 {
   padding:2px 4px;
@@ -106,20 +142,28 @@ ccl-slide .wrapper
   background:linear-gradient(to right, var(--COLOR-PRIMARY), rgba(0, 0, 0, 0)) ;
 }
 
+#aPropos .mainContent .sectionRight .competences h3
+{
+  width:100% ;
+  margin-top:8px ;
+}
 #accueil .mainContent .sectionRight
 {
+  --TAILLE-IMAGE-PROFIL:350px ;
   flex-shrink:0 ;
   position:relative ;
   display:flex ;
   gap:25px ;
+  margin-bottom:25px ;
 }
 
 #accueil .mainContent .sectionRight img.profil
 {
-  width:350px ;
+  width:var(--TAILLE-IMAGE-PROFIL) ;
   border-radius:18px ;
   position:relative ;
   z-index:2 ;
+  transition:all .4s ;
 }
 #accueil .mainContent .sectionRight .imgBorder
 {
@@ -127,11 +171,12 @@ ccl-slide .wrapper
   border:4px solid var(--COLOR-PRIMARY) ;
   z-index:1 ;
   height:100% ;
-  width:350px ;
+  width:var(--TAILLE-IMAGE-PROFIL) ;
   position:absolute ;
   top:15px ;
   left:15px ;
   border-radius:18px ;
+  transition:all .4s ;
 }
 
 #accueil .mainContent .sectionRight .links
@@ -185,6 +230,15 @@ ccl-slide .wrapper
   transition:all .4s ;
 }
 
+ccl-slide h1:after
+{
+  content:'' ;
+  background:linear-gradient(to right, var(--COLOR-PRIMARY), rgba(0, 0, 0, 0)) ;
+  width:70% ;
+  height:3px ;
+  display:block ;
+}
+
 #aPropos .competence:hover img
 {
   transform:translateY(-0.5rem) ;
@@ -198,6 +252,156 @@ ccl-slide .wrapper
 {
   transform:translateX(0) ;
 }
-#aPropos .competence:hover span
+
+#projets .mainContent
 {
+  --TAILLE-CARTE-PROJET:330px ;
+  width:100% ;
+  display:grid ;
+  justify-items:center ;
+  gap:40px 15px ;
+  margin-top:35px ;
+  margin-bottom:15px ;
+  grid-template-columns: repeat(auto-fit, minmax(var(--TAILLE-CARTE-PROJET), 1fr));
+}
+#projets .mainContent .carteProjet
+{
+  background:var(--COLOR-BG-DARK) ;
+  width:var(--TAILLE-CARTE-PROJET) ;
+  border-radius:8px ;
+  position:relative ;
+  display:flex ;
+  flex-direction:column ;
+  box-shadow:4px 4px 0 0 var(--COLOR-PRIMARY) ;
+}
+#projets .mainContent .carteProjet.enCours:after
+{
+  content:'Projet en cours...' ;
+  font-size:.9rem ;
+  position:absolute ;
+  top:0 ;
+  left:50% ;
+  transform:translate(-50%, -100%) ;
+  background:var(--COLOR-BG-DARK) ;
+  padding:4px 8px ;
+  border-radius:8px 8px 0 0 ;
+}
+
+#projets .mainContent .carteProjet .carteHeader img.capture
+{
+  width:calc(100% - 8px) ;
+  border-radius:4px ;
+  margin:4px ;
+}
+#projets .mainContent .carteProjet .carteHeader .title
+{
+  display:flex ;
+  justify-content:space-between ;
+  align-items:center ;
+  margin:8px 15px ;
+}
+#projets .mainContent .carteProjet .carteHeader img.logo
+{
+  max-height:50px ;
+  border-radius:8px ;
+}
+#projets .mainContent .carteProjet .carteHeader .listeTechnos
+{
+  display:flex ;
+  flex-wrap:wrap ;
+  margin:8px 15px ;
+  gap:5px ;
+}
+#projets .mainContent .carteProjet .carteHeader .listeTechnos .techno
+{
+    height:20px ;
+    flex-shrink:0 ;
+    font-weight:700 ;
+    padding:2px 6px ;
+    border-radius:10px ;
+    color:black ;
+    font-size:.9rem ;
+    line-height:.9rem ;
+}
+#projets .mainContent .carteProjet .carteBody
+{
+  flex-grow:1 ;
+  display:flex ;
+  flex-direction:column ;
+  justify-content:space-between ;
+}
+#projets .mainContent .carteProjet .carteBody .description
+{
+  margin:8px 15px ;
+  font-size:.9rem ;
+}
+#projets .mainContent .carteProjet:hover .carteBody .description
+{
+  /*height:fit-content ;*/
+}
+#projets .mainContent .carteProjet .carteBody .links
+{
+  display:flex ;
+  flex-direction:row-reverse ;
+  justify-content:space-between ;
+  padding:10px 15px ;
+}
+
+.react
+{
+  background:rgb(170, 233, 234) ;
+}
+.typescript
+{
+  background:rgb(170, 189, 234) ;
+}
+.mongodb
+{
+  background:rgb(191, 170, 234) ;
+}
+.fullstack
+{
+  background:rgb(227, 170, 234) ;
+}
+.figma
+{
+  background:rgb(234, 170, 196) ;
+}
+.designsystem
+{
+  background:rgb(234, 170, 170) ;
+}
+.js
+{
+  background:rgb(234, 225, 170) ;
+}
+.css
+{
+  background:rgb(207, 234, 170) ;
+}
+.html
+{
+  background:rgb(170, 234, 170) ;
+}
+.php
+{
+  background:rgb(170, 233, 234) ;
+}
+.api
+{
+  background:rgb(170, 189, 234) ;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size:.9rem ;
+  }
+  ccl-slide h1
+  {
+    font-size:2rem ;
+  }
+  #accueil .mainContent .sectionRight
+  {
+    --TAILLE-IMAGE-PROFIL:250px ;
+  }
 }

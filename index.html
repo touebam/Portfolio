@@ -57,29 +57,42 @@
                     <img src="assets/floating-icons/accueil1.png" class="floating-icon icon6 blur" />
                 </div>
                 <div class="slideButtons">
+                    <img src="assets/images/fleche.png" alt="fleche pointant vers le bouton à propos">
                     <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>&#192; propos</ccl-button>
                 </div>
             </div>
         </ccl-slide>
         <ccl-slide id="aPropos">
             <div class="wrapper">
-                <h1>&#192; propos de moi.</h1>
+                <h1></h1>
                 <div class="mainContent">
-                    <p>Après une formation en intégration web, j’ai confirmé ce qui me motive le plus : concevoir, tester, améliorer des expériences numériques. J’aspire à rejoindre une entreprise où je pourrai apprendre, collaborer, et contribuer avec créativité.</p>
-                    <div class="aProposButtons">
-                        <ccl-button type="secondary" icon="fa-paper-plane">Contactez-moi</ccl-button>
-                        <ccl-button type="secondary" icon="fa-file-arrow-down">Mon CV</ccl-button>
-                        <ccl-button type="secondary" icon="fa-brands fa-linkedin-in" href=""></ccl-button>
+                    <div class="sectionLeft">
+                        <h1>&#192; propos de moi.</h1>
+                        <p>Ma formation en BUT informatique m'a ouvert les yeux sur la richesse du développement web. Au-delà de la technique, j'ai découvert ma passion pour résoudre des problèmes réels et créer des expériences qui ont du sens pour les utilisateurs.</p>
+                        <div class="aProposButtons">
+                            <ccl-button type="secondary" icon="fa-paper-plane">Contactez-moi</ccl-button>
+                            <ccl-button type="secondary" icon="fa-file-arrow-down">Mon CV</ccl-button>
+                            <ccl-button type="secondary" icon="fa-brands fa-linkedin-in" href=""></ccl-button>
+                        </div>
                     </div>
-                    <p class="title">Mes compétences</p>
-                    <div class="competences">
-                        <template id="competence">
-                            <div class="competence">
-                                <img src="assets/competences/html.svg" alt="logo html">
-                                <p class="label">HTML</p>
-                                <span></span>
-                            </div>
-                        </template>
+                    <div class="sectionRight">
+                        <h2 class="title">Mes compétences</h2>
+                            <template id="competence">
+                                <div class="competence">
+                                    <img src="assets/competences/html.svg" alt="logo html">
+                                    <p class="label">HTML</p>
+                                    <span></span>
+                                </div>
+                            </template>
+                        <div id="competencesFront" class="competences">
+                            <h3>Front-end</h3>
+                        </div>
+                        <div id="competencesBack" class="competences">
+                            <h3>Back-end</h3>
+                        </div>
+                        <div id="competencesOutils" class="competences">
+                            <h3>Outils</h3>
+                        </div>
                     </div>
                 </div>
                 <div class="background-icons">
@@ -99,6 +112,116 @@
         <ccl-slide id="projets">
             <div class="wrapper">
                 <h1>Mes projets</h1>
+                <div class="mainContent">
+                    <!-- MES PROJETS : MARKED ET CCLIB en cours, marked design system, appexels, lovey puppy et terraforma pour le reste-->
+                    <div class="carteProjet enCours">
+                        <div class="carteHeader">
+                            <div class="title">
+                                <h2>Marked</h2>
+                                <img class="logo" src="assets/projets/logoMarked.png" alt="logo du projet Marked">
+                            </div>
+                            <img class="capture" src="assets/projets/captureMarked.png" alt="image de présentation du projet Marked">
+                            <div class="listeTechnos">
+                                <span class="techno react">REACT</span>
+                                <span class="techno typescript">TYPESCRIPT</span>
+                                <span class="techno mongodb">MONGODB</span>
+                                <span class="techno fullstack">FULLSTACK</span>
+                                <span class="techno figma">FIGMA</span>
+                                <span class="techno designsystem">DESIGN SYSTEM</span>
+                            </div>
+                        </div>
+                        <div class="carteBody">
+                            <p class="description">Marked est une application personnelle développée pour organiser efficacement mes onglets en catégories. Ce projet m’a permis de m'introduire à React, TypeScript et de concevoir un design system complet.</p>
+                            <div class="links">
+                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right">Consulter le projet</ccl-button>
+                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right">Consulter la maquette</ccl-button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carteProjet enCours">
+                        <div class="carteHeader">
+                            <div class="title">
+                                <h2>CC-Lib</h2>
+                                <img class="logo" src="assets/projets/logoCCLib.png" alt="logo du projet CC-Lib">
+                            </div>
+                            <img class="capture" src="assets/projets/captureCCLib.png" alt="image de présentation du projet CC-Lib">
+                            <div class="listeTechnos">
+                                <span class="techno js">JS</span>
+                                <span class="techno css">CSS</span>
+                                <span class="techno html">HTML</span>
+                            </div>
+                        </div>
+                        <div class="carteBody">
+                            <p class="description">CC-Lib est une bibliothèque de composants que je développe en autonomie afin de m'aider dans la conception de mes projets. Certains composants sont notamment utilisés pour la conception de ce portfolio.</p>
+                            <div class="links">
+                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right">Consulter le projet</ccl-button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carteProjet">
+                        <div class="carteHeader">
+                            <div class="title">
+                                <h2>Terraforma</h2>
+                                <img class="logo" src="assets/projets/logoTerraforma.png" alt="logo du projet Terraforma">
+                            </div>
+                            <img class="capture" src="assets/projets/captureTerraforma.png" alt="image de présentation du projet Terraforma">
+                            <div class="listeTechnos">
+                                <span class="techno js">JS</span>
+                                <span class="techno css">CSS</span>
+                                <span class="techno html">HTML</span>
+                                <span class="techno php">PHP</span>
+                            </div>
+                        </div>
+                        <div class="carteBody">
+                            <p class="description">Projet de 10 semaines réalisé en équipe de 7, visant à créer un jeu éducatif pour des élèves de 3e, avec un espace de gestion pour les enseignants. J’ai conçu les maquettes et développé les interfaces.</p>
+                            <div class="links">
+                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right">Consulter le projet</ccl-button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carteProjet">
+                        <div class="carteHeader">
+                            <div class="title">
+                                <h2>APPexels</h2>
+                                <img class="logo" src="assets/projets/logoPexels.png" alt="logo du projet APPexels">
+                            </div>
+                            <img class="capture" src="assets/projets/captureAPPexels.png" alt="image de présentation du projet APPexels">
+                            <div class="listeTechnos">
+                                <span class="techno api">API</span>
+                                <span class="techno js">JS</span>
+                                <span class="techno css">CSS</span>
+                                <span class="techno html">HTML</span>
+                            </div>
+                        </div>
+                        <div class="carteBody">
+                            <p class="description">APPexels est une application utilisant l’API Pexels pour rechercher et afficher des images, utilisées comme fonds d’écran. Ce projet m’a permis d’apprendre à exploiter une API et vise à enrichir d’autres apps comme Marked avec des options de personnalisation.</p>
+                            <div class="links">
+                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right">Consulter le projet</ccl-button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carteProjet">
+                        <div class="carteHeader">
+                            <div class="title">
+                                <h2>Lovey Puppy</h2>
+                                <img class="logo" src="assets/projets/logoLoveyPuppy.png" alt="logo du projet Lovey Puppy">
+                            </div>
+                            <img class="capture" src="assets/projets/captureLoveyPuppy.png" alt="image de présentation du projet Lovey Puppy">
+                            <div class="listeTechnos">
+                                <span class="techno js">JS</span>
+                                <span class="techno css">CSS</span>
+                                <span class="techno html">HTML</span>
+                            </div>
+                        </div>
+                        <div class="carteBody">
+                            <p class="description">Cet exercice consistait à créer le site d'une entreprise fictive dirigée par d'autres groupes d'élèves. L'objectif était ainsi d'apprendre à suivre et écouter les différents besoins et remarques de notre clients.</p>
+                            <div class="links">
+                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right">Consulter le projet</ccl-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="background-icons">
                     <img src="assets/floating-icons/projet1.png" class="floating-icon icon2" />
                     <img src="assets/floating-icons/projet2.png" class="floating-icon icon3" />
