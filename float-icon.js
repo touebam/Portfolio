@@ -23,7 +23,7 @@ function initFloatingIcons()
       const offsetY=(Math.random() * 40 - 20).toFixed(2) ;
       icon.style.top='calc('+position.top+' + '+offsetY+'px)' ;
       icon.style.left='calc('+position.left+' + '+offsetX+'px)' ;
-      icon.style.animationDelay=position.delay ;
+      //icon.style.animationDelay=position.delay ;
     }
 
     const rotate = (Math.random() < 0.5 ? 
@@ -41,8 +41,13 @@ function initFloatingIcons()
       (Math.random() * 10 - 15)
     ).toFixed(2) ;
 
+    const duree=(Math.random() * 0.5 + 0.4).toFixed(2) ;
+    const distance=-1*(Math.random() * 600 + 300).toFixed(2) ;
+
     icon.style.setProperty('--ROTATE', `${rotate}deg`) ;
     icon.style.setProperty('--TRANSLATE-X', `${translateX}px`) ;
     icon.style.setProperty('--TRANSLATE-Y', `${translateY}px`) ;
+    icon.style.setProperty('--DUREE-FALL-IN', `${duree}s`) ;
+    icon.style.setProperty('--DISTANCE-FALL-IN', `${distance}px`) ;
   }) ;
 }

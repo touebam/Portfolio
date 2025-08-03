@@ -95,7 +95,8 @@ ccl-slide .wrapper
   left:-40px ;
 }
 
-.background-icons {
+.background-icons 
+{
   position: fixed;
   top: 0;
   left: 0;
@@ -106,12 +107,25 @@ ccl-slide .wrapper
   z-index: -1;
 }
 
-.floating-icon {
+ccl-slide.active .floating-icon
+{
+  animation:fall-in var(--DUREE-FALL-IN) ease-out forwards, float 16s ease-in-out infinite ;
+  animation-delay: 0s, var(--DUREE-FALL-IN) ;
+}
+.floating-icon 
+{
   position: absolute;
   width:clamp(120px, 10vw, 360px) ;
   opacity:0.7;
-  animation:float 16s ease-in-out infinite;
-  transform:translate(0, 0) rotate(0deg);
+}
+
+@keyframes fall-in {
+  0% {
+    transform: translateY(var(--DISTANCE-FALL-IN)) scale(0.7);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
 }
 
 @keyframes float {

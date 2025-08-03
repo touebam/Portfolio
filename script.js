@@ -12,7 +12,15 @@ function initNavbar()
     const navbarLinks=document.querySelectorAll('ccl-navbar .wrapper > *:not([event="undefined"])') ;
     navbarLinks.forEach(function(link, i)
     {
-        link.addEventListener('click', () => slideshow.showSlide(i)) ;
+        link.addEventListener('click', () => 
+        {
+            slideshow.showSlide(i) ;
+            const activeLink=document.querySelector('ccl-navbar .active') ;
+            if (activeLink)
+                activeLink.classList.remove('active') ;
+            link.classList.add('active') ;
+        }) ;
+
     }) ;
     const collapsedContainerLinks=document.querySelectorAll('ccl-navbar .collapsedContainer > *:not(#navbarCloseButton)') ;
     collapsedContainerLinks.forEach(function(link, i)
