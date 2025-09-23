@@ -28,25 +28,15 @@
     <script src='script.js'></script>
     
     <link rel="canonical" href="https://morgan-toueba.fr/">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Morgan Toueba",
-        "jobTitle": "Développeur Front-end Junior",
-        "url": "https://morgan-toueba.fr",
-        "email": "touebamorgan@gmail.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Grenoble",
-            "addressRegion": "Isère",
-            "addressCountry": "FR"
-        },
-        "sameAs": [
-            "https://github.com/touebam",
-            "https://www.linkedin.com/in/morgan-toueba-1aa38b372/"
-        ]
-    }
+    <script>
+    fetch('data/schema.json')
+        .then(response => response.json())
+        .then(data => {
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(data);
+        document.head.appendChild(script);
+        });
     </script>
 </head>
 <body>

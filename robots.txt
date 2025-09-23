@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: /CC-Lib/
+Disallow: /assets/
 Allow: /
 
 Sitemap: https://morgan-toueba.fr/sitemap.xml

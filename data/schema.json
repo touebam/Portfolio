@@ -1,0 +1,108 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "Morgan Toueba",
+      "jobTitle": "Développeur Front-end Junior",
+      "url": "https://morgan-toueba.fr",
+      "email": "touebamorgan@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Grenoble",
+        "addressRegion": "Isère",
+        "addressCountry": "FR"
+      },
+      "sameAs": [
+        "https://github.com/touebam",
+        "https://www.linkedin.com/in/morgan-toueba-1aa38b372/"
+      ]
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "BUT Informatique - Parcours réalisation d'applications",
+      "educationalLevel": "Bachelor",
+      "awardingBody": "IUT2 Grenoble",
+      "startDate": "2022",
+      "endDate": "2025",
+      "location": "Grenoble, Isère"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "BTS CPI - Conception de Produits Industriels",
+      "educationalLevel": "BTS",
+      "awardingBody": "Lycée Arbez Carme",
+      "startDate": "2020",
+      "endDate": "2022",
+      "location": "Bellignat, Ain"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Bac STI2D - Sciences et Technologies Industrielles",
+      "educationalLevel": "Baccalauréat",
+      "awardingBody": "Lycée Arbez Carme",
+      "startDate": "2017",
+      "endDate": "2019",
+      "location": "Bellignat, Ain"
+    },
+    {
+      "@type": "JobPosting",
+      "title": "Développeur Full-Stack - Alternance",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "MVP"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Grenoble",
+          "addressRegion": "Isère",
+          "addressCountry": "FR"
+        }
+      },
+      "startDate": "2024",
+      "endDate": "2025",
+      "description": "Développement d'outils internes et d'applications web complètes dans un environnement agile. Participation à toutes les phases du développement, de l'analyse des besoins à la mise en production."
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Pickr",
+      "url": "https://touebam.github.io/Pickr/",
+      "description": "Application web permettant de rechercher des films et séries selon différents critères. Projet réalisé en React, gestion des données et intégration d'API externes.",
+      "programmingLanguage": "JavaScript",
+      "about": ["React", "API", "Fullstack"]
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Marked",
+      "url": "https://marked-touebam.web.app/",
+      "description": "Application pour organiser des onglets en catégories, développée avec React et TypeScript, incluant un design system complet.",
+      "programmingLanguage": "TypeScript",
+      "about": ["React", "Fullstack", "MongoDB", "Figma"]
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "CC-Lib",
+      "url": "https://github.com/touebam/CC-Lib",
+      "description": "Bibliothèque de composants JS/HTML/CSS pour faciliter le développement de projets, utilisée dans le portfolio.",
+      "programmingLanguage": "JavaScript",
+      "about": ["JS", "HTML", "CSS"]
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Terraforma",
+      "url": "https://touebam.github.io/TerraForma/view/creationCompte.html",
+      "description": "Jeu éducatif pour des élèves de 3e, avec un espace de gestion pour enseignants. Maquettes et interfaces réalisées par Morgan Toueba.",
+      "programmingLanguage": "HTML/CSS/JS/PHP",
+      "about": ["Three.js", "PHP", "Front-end", "Back-end"]
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "APPexels",
+      "description": "Application utilisant l’API Pexels pour rechercher et afficher des images. Projet visant à apprendre l'exploitation d'API et l'intégration dans d'autres apps.",
+      "programmingLanguage": "JavaScript",
+      "about": ["API", "JS", "CSS", "HTML"]
+    }
+  ]
+}
