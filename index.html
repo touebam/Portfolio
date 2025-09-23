@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Morgan Toueba</title>
+    <title>Morgan Toueba - Portfolio Développeur Web</title>
+    <meta name="description" content="Portfolio de Morgan Toueba, développeur front-end junior passionné par les technologies web. Découvrez mes projets en React, JavaScript et mes compétences en développement web.">
+    <meta name="keywords" content="Morgan Toueba, développeur front-end, portfolio, React, JavaScript, HTML, CSS, Grenoble">
+    <meta name="author" content="Morgan Toueba">
+
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a4699f4145.js" crossorigin="anonymous"></script>
     
@@ -22,415 +26,439 @@
 
     <script src='float-icon.js'></script>
     <script src='script.js'></script>
+    
+    <link rel="canonical" href="https://morgan-toueba.fr/">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Morgan Toueba",
+        "jobTitle": "Développeur Front-end Junior",
+        "url": "https://morgan-toueba.fr",
+        "email": "touebamorgan@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Grenoble",
+            "addressRegion": "Isère",
+            "addressCountry": "FR"
+        },
+        "sameAs": [
+            "https://github.com/touebam",
+            "https://www.linkedin.com/in/morgan-toueba-1aa38b372/"
+        ]
+    }
+    </script>
 </head>
 <body>
-    <ccl-navbar items='[
-        {"type":"logo", "name":"Morgan Toueba", "fixed":true, "event":"showSlide(0)"},
-        [
-            {"type": "link", "label": "Accueil"},
-            {"type": "link", "label": "&#192; propos"},
-            {"type": "link", "label": "Projets"},
-            {"type": "link", "label": "Formations & Expériences"},
-            {"type": "link", "label": "Contact"}
-        ]
-    ]'></ccl-navbar>
-    <ccl-slideshow 
-        animations="opacity slide-up" 
-        enter-duration=".6s" 
-        exit-duration=".2s">
-        <ccl-slide id="accueil">
-            <div class="background-icons">
-                <img src="assets/floating-icons/accueil1.png" class="floating-icon icon1" />
-                <img src="assets/floating-icons/accueil2.png" class="floating-icon icon2" />
-                <img src="assets/floating-icons/accueil3.png" class="floating-icon icon3" />
-                <img src="assets/floating-icons/accueil3.png" class="floating-icon icon4 blur" />
-                <img src="assets/floating-icons/accueil2.png" class="floating-icon icon5 blur" />
-                <img src="assets/floating-icons/accueil1.png" class="floating-icon icon6 blur" />
-            </div>
-            <div class="wrapper">
-                <h1></h1>
-                <div class="mainContent">
-                    <div class="sectionLeft">
-                        <h1>Morgan Toueba</h1>
-                        <p><b>Développeur front-end junior</b>, je suis passionné par les technologies du web et animé par l’envie de créer des interfaces modernes, accessibles et performantes. Aujourd’hui, je cherche à mettre mes compétences au service d’une équipe dynamique et innovante.</p>
-                    </div>
-                    <div class="sectionRight">
-                        <img class='profil' src="assets/images/photoMorgan.jpg" alt="Photo de profil Morgan">
-                        <div class="imgBorder"></div>
-                        <div class="links">
-                            <ccl-button size="medium" type="primary" icon="fa-brands fa-github" href="https://github.com/touebam" target="_blank"></ccl-button>
-                            <ccl-button size="medium" type="primary" icon="fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/morgan-toueba-1aa38b372/" target="_blank"></ccl-button>
+    <header>
+        <ccl-navbar items='[
+            {"type":"logo", "name":"Morgan Toueba", "fixed":true, "event":"showSlide(0)"},
+            [
+                {"type": "link", "label": "Accueil"},
+                {"type": "link", "label": "&#192; propos"},
+                {"type": "link", "label": "Projets"},
+                {"type": "link", "label": "Formations & Expériences"},
+                {"type": "link", "label": "Contact"}
+            ]
+        ]'></ccl-navbar>
+    </header>
+    <main>
+        <ccl-slideshow 
+            animations="opacity slide-up" 
+            enter-duration=".6s" 
+            exit-duration=".2s">
+            <ccl-slide id="accueil">
+                <div class="background-icons">
+                    <img src="assets/floating-icons/accueil1.png" class="floating-icon icon1" alt="" />
+                    <img src="assets/floating-icons/accueil2.png" class="floating-icon icon2" alt="" />
+                    <img src="assets/floating-icons/accueil3.png" class="floating-icon icon3" alt="" />
+                    <img src="assets/floating-icons/accueil3.png" class="floating-icon icon4 blur" alt="" />
+                    <img src="assets/floating-icons/accueil2.png" class="floating-icon icon5 blur" alt="" />
+                    <img src="assets/floating-icons/accueil1.png" class="floating-icon icon6 blur" alt="" />
+                </div>
+                <section class="wrapper">
+                    <span class="empty"></span>
+                    <div class="mainContent">
+                        <div class="sectionLeft">
+                            <h1>Morgan Toueba</h1>
+                            <p><b>Développeur front-end junior</b>, je suis passionné par les technologies du web et animé par l’envie de créer des interfaces modernes, accessibles et performantes. Aujourd’hui, je cherche à mettre mes compétences au service d’une équipe dynamique et innovante.</p>
+                        </div>
+                        <div class="sectionRight">
+                            <img class='profil' src="assets/images/photoMorgan.jpg" alt="Photo de profil de Morgan Toueba">
+                            <div class="imgBorder"></div>
+                            <div class="links">
+                                <ccl-button size="medium" type="primary" icon="fa-brands fa-github" href="https://github.com/touebam" target="_blank"></ccl-button>
+                                <ccl-button size="medium" type="primary" icon="fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/morgan-toueba-1aa38b372/" target="_blank"></ccl-button>
+                            </div>
                         </div>
                     </div>
+                    <div class="slideButtons">
+                        <img src="assets/images/fleche.png" alt="Flèche pointant vers le bouton à propos">
+                        <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>&#192; propos</ccl-button>
+                    </div>
+                </section>
+            </ccl-slide>
+            <ccl-slide id="aPropos">
+                <div class="background-icons">
+                    <img src="assets/floating-icons/html.webp" class="floating-icon icon2" alt="" />
+                    <img src="assets/floating-icons/css.webp" class="floating-icon icon3" alt="" />
+                    <img src="assets/floating-icons/js.png" class="floating-icon icon1" alt="" />
+                    <img src="assets/floating-icons/css.webp" class="floating-icon icon4 blur" alt="" />
+                    <img src="assets/floating-icons/html.webp" class="floating-icon icon5 blur" alt="" />
+                    <img src="assets/floating-icons/js.png" class="floating-icon icon6 blur" alt="" />
                 </div>
-                <div class="slideButtons">
-                    <img src="assets/images/fleche.png" alt="fleche pointant vers le bouton à propos">
-                    <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>&#192; propos</ccl-button>
-                </div>
-            </div>
-        </ccl-slide>
-        <ccl-slide id="aPropos">
-            <div class="background-icons">
-                <img src="assets/floating-icons/html.webp" class="floating-icon icon2" />
-                <img src="assets/floating-icons/css.webp" class="floating-icon icon3" />
-                <img src="assets/floating-icons/js.png" class="floating-icon icon1" />
-                <img src="assets/floating-icons/css.webp" class="floating-icon icon4 blur" />
-                <img src="assets/floating-icons/html.webp" class="floating-icon icon5 blur" />
-                <img src="assets/floating-icons/js.png" class="floating-icon icon6 blur" />
-            </div>
-            <div class="wrapper">
-                <h1></h1>
-                <div class="mainContent">
-                    <div class="sectionLeft">
-                        <h1>&#192; propos de moi.</h1>
-                        <p>Récemment diplômé d'un BUT informatique, je cherche à débuter ma carrière en tant que développeur front-end. Ce domaine m'attire particulièrement car il me permet de combiner créativité et technique pour proposer des sites web et des solutions numériques de qualité qui répondent aux besoins des utilisateurs.</p>
-                        <div class="aProposButtons">
-                            <ccl-button type="secondary" icon="fa-paper-plane" event="showSlide(4)">Contactez-moi</ccl-button>
-                            <ccl-button type="secondary" icon="fa-file-arrow-down" href="assets/documents/CV Morgan Toueba.pdf" target="_blank">Mon CV</ccl-button>
-                            <ccl-button type="secondary" icon="fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/morgan-toueba-1aa38b372/" target="_blank"></ccl-button>
+                <section class="wrapper">
+                    <span class="empty"></span>
+                    <div class="mainContent">
+                        <div class="sectionLeft">
+                            <h1>&#192; propos de moi.</h1>
+                            <p>Récemment diplômé d'un BUT informatique, je cherche à débuter ma carrière en tant que développeur front-end. Ce domaine m'attire particulièrement car il me permet de combiner créativité et technique pour proposer des sites web et des solutions numériques de qualité qui répondent aux besoins des utilisateurs.</p>
+                            <div class="aProposButtons">
+                                <ccl-button type="secondary" icon="fa-paper-plane" event="showSlide(4)">Contactez-moi</ccl-button>
+                                <ccl-button type="secondary" icon="fa-file-arrow-down" href="assets/documents/CV Morgan Toueba.pdf" target="_blank">Mon CV</ccl-button>
+                                <ccl-button type="secondary" icon="fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/morgan-toueba-1aa38b372/" target="_blank"></ccl-button>
+                            </div>
+                        </div>
+                        <div class="sectionRight">
+                            <h1 class="title">Mes compétences</h1>
+                                <template id="competence">
+                                    <div class="competence">
+                                        <img src="assets/competences/html.svg" alt="logo html">
+                                        <p class="label">HTML</p>
+                                        <span></span>
+                                    </div>
+                                </template>
+                            <div id="competencesFront" class="competences">
+                                <h2>Front-end</h2>
+                            </div>
+                            <div id="competencesBack" class="competences">
+                                <h2>Back-end</h2>
+                            </div>
+                            <div id="competencesOutils" class="competences">
+                                <h2>Outils</h2>
+                            </div>
                         </div>
                     </div>
-                    <div class="sectionRight">
-                        <h1 class="title">Mes compétences</h1>
-                            <template id="competence">
-                                <div class="competence">
-                                    <img src="assets/competences/html.svg" alt="logo html">
-                                    <p class="label">HTML</p>
-                                    <span></span>
+                    <div class="slideButtons">
+                        <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
+                        <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>Projets</ccl-button>
+                    </div>
+                </section>
+            </ccl-slide>
+            <ccl-slide id="projets">
+                <div class="background-icons">
+                    <img src="assets/floating-icons/projet1.png" class="floating-icon icon2" alt="" />
+                    <img src="assets/floating-icons/projet2.png" class="floating-icon icon3" alt="" />
+                    <img src="assets/floating-icons/projet3.png" class="floating-icon icon1" alt="" />
+                    <img src="assets/floating-icons/projet2.png" class="floating-icon icon4 blur" alt="" />
+                    <img src="assets/floating-icons/projet1.png" class="floating-icon icon5 blur" alt="" />
+                    <img src="assets/floating-icons/projet3.png" class="floating-icon icon6 blur" alt="" />
+                </div>
+                <section class="wrapper">
+                    <h1>Mes projets</h1>
+                    <div class="mainContent">
+                        <div class="carteProjet">
+                            <div class="carteHeader">
+                                <div class="title">
+                                    <h2>Pickr</h2>
+                                    <img class="logo" src="assets/projets/logoPickr.png" alt="logo du projet Pickr" loading="lazy">
                                 </div>
-                            </template>
-                        <div id="competencesFront" class="competences">
-                            <h3>Front-end</h3>
+                                <img class="capture" src="assets/projets/capturePickr.png" alt="Image de présentation du projet Pickr" loading="lazy">
+                                <div class="listeTechnos">
+                                    <span class="techno react">REACT</span>
+                                    <span class="techno fullstack">FULLSTACK</span>
+                                    <span class="techno api">API</span>
+                                    <span class="techno figma">RESPONSIVE DESIGN</span>
+                                </div>
+                            </div>
+                            <div class="carteBody">
+                                <p class="description">Pickr est une application web permettant de rechercher des films et séries selon différents critères. Ce projet m’a permis d’approfondir mon usage de React, d’explorer des concepts clés du développement tels que l’optimisation des requêtes et de la gestion des données, le respect de l’ergonomie, ou encore l’intégration d'API externes.</p>
+                                <div class="links">
+                                    <ccl-button size="small" icon="fa-arrow-right" icon-position="right" href="https://touebam.github.io/Pickr/" target="_blank">Consulter le projet</ccl-button>
+                                </div>
+                            </div>
                         </div>
-                        <div id="competencesBack" class="competences">
-                            <h3>Back-end</h3>
+                        <div class="carteProjet enCours">
+                            <div class="carteHeader">
+                                <div class="title">
+                                    <h2>Marked</h2>
+                                    <img class="logo" src="assets/projets/logoMarked.png" alt="Logo du projet Marked" loading="lazy">
+                                </div>
+                                <img class="capture" src="assets/projets/captureMarked.png" alt="Image de présentation du projet Marked" loading="lazy">
+                                <div class="listeTechnos">
+                                    <span class="techno react">REACT</span>
+                                    <span class="techno typescript">TYPESCRIPT</span>
+                                    <span class="techno mongodb">MONGODB</span>
+                                    <span class="techno fullstack">FULLSTACK</span>
+                                    <span class="techno figma">FIGMA</span>
+                                    <span class="techno designsystem">DESIGN SYSTEM</span>
+                                </div>
+                            </div>
+                            <div class="carteBody">
+                                <p class="description">Marked est une application personnelle développée pour organiser efficacement mes onglets en catégories. Ce projet m’a permis de m'introduire à React, TypeScript et de concevoir un design system complet.</p>
+                                <div class="links">
+                                    <ccl-button size="small" icon="fa-arrow-right" icon-position="right" href="https://marked-touebam.web.app/" target="_blank">Consulter le projet</ccl-button>
+                                    <ccl-button size="small" icon="fa-arrow-right" icon-position="right" href="https://www.figma.com/design/4zMwsTEQBEjA79aJUYWir4/Marked?node-id=0-1&p=f&t=KGKKiVst7s1bBndT-0" target="_blank">Consulter la maquette</ccl-button>
+                                </div>
+                            </div>
                         </div>
-                        <div id="competencesOutils" class="competences">
-                            <h3>Outils</h3>
+                        <div class="carteProjet enCours">
+                            <div class="carteHeader">
+                                <div class="title">
+                                    <h2>CC-Lib</h2>
+                                    <img class="logo" src="assets/projets/logoCCLib.png" alt="Logo du projet CC-Lib" loading="lazy">
+                                </div>
+                                <img class="capture" src="assets/projets/captureCCLib.png" alt="Image de présentation du projet CC-Lib" loading="lazy">
+                                <div class="listeTechnos">
+                                    <span class="techno js">JS</span>
+                                    <span class="techno css">CSS</span>
+                                    <span class="techno html">HTML</span>
+                                </div>
+                            </div>
+                            <div class="carteBody">
+                                <p class="description">CC-Lib est une bibliothèque de composants que je développe en autonomie afin de m'aider dans la conception de mes projets. Certains composants sont notamment utilisés pour la conception de ce portfolio.</p>
+                                <div class="links">
+                                    <ccl-button size="small" icon="fa-arrow-right" icon-position="right" href="https://github.com/touebam/CC-Lib" target="_blank">Consulter le projet</ccl-button>
+                                </div>
+                            </div>
                         </div>
+                        <div class="carteProjet">
+                            <div class="carteHeader">
+                                <div class="title">
+                                    <h2>Terraforma</h2>
+                                    <img class="logo" src="assets/projets/logoTerraforma.png" alt="Logo du projet Terraforma" loading="lazy">
+                                </div>
+                                <img class="capture" src="assets/projets/captureTerraforma.png" alt="Image de présentation du projet Terraforma" loading="lazy">
+                                <div class="listeTechnos">
+                                    <span class="techno js">JS</span>
+                                    <span class="techno css">CSS</span>
+                                    <span class="techno html">HTML</span>
+                                    <span class="techno php">PHP</span>
+                                    <span class="techno threejs">Three.js</span>
+                                </div>
+                            </div>
+                            <div class="carteBody">
+                                <p class="description">Projet de 10 semaines réalisé en équipe de 7, visant à créer un jeu éducatif pour des élèves de 3e, avec un espace de gestion pour les enseignants. J’ai conçu les maquettes et développé les interfaces.</p>
+                                <div class="links">
+                                    <ccl-button size="small" icon="fa-arrow-right" icon-position="right" href="https://touebam.github.io/TerraForma/view/creationCompte.html" target="_blank">Consulter le projet</ccl-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carteProjet">
+                            <div class="carteHeader">
+                                <div class="title">
+                                    <h2>APPexels</h2>
+                                    <img class="logo" src="assets/projets/logoPexels.png" alt="Logo du projet APPexels" loading="lazy">
+                                </div>
+                                <img class="capture" src="assets/projets/captureAPPexels.png" alt="Image de présentation du projet APPexels" loading="lazy">
+                                <div class="listeTechnos">
+                                    <span class="techno api">API</span>
+                                    <span class="techno js">JS</span>
+                                    <span class="techno css">CSS</span>
+                                    <span class="techno html">HTML</span>
+                                </div>
+                            </div>
+                            <div class="carteBody">
+                                <p class="description">APPexels est une application utilisant l’API Pexels pour rechercher et afficher des images, utilisées comme fonds d’écran. Ce projet m’a permis d’apprendre à exploiter une API et vise à enrichir d’autres apps comme Marked avec des options de personnalisation.</p>
+                                <div class="links">
+                                    <ccl-button size="small" icon="fa-arrow-right" icon-position="right">Consulter le projet</ccl-button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="carteProjet">
+                            <div class="carteHeader">
+                                <div class="title">
+                                    <h2>Lovey Puppy</h2>
+                                    <img class="logo" src="assets/projets/logoLoveyPuppy.png" alt="Logo du projet Lovey Puppy" loading="lazy">
+                                </div>
+                                <img class="capture" src="assets/projets/captureLoveyPuppy.png" alt="Image de présentation du projet Lovey Puppy" loading="lazy">
+                                <div class="listeTechnos">
+                                    <span class="techno js">JS</span>
+                                    <span class="techno css">CSS</span>
+                                    <span class="techno html">HTML</span>
+                                </div>
+                            </div>
+                            <div class="carteBody">
+                                <p class="description">Cet exercice consistait à créer le site d'une entreprise fictive dirigée par d'autres groupes d'élèves. L'objectif était ainsi d'apprendre à suivre et écouter les différents besoins et remarques de notre clients.</p>
+                                <div class="links">
+                                    <ccl-button size="small" icon="fa-arrow-right" icon-position="right" href="https://touebam.github.io/Lovey-Puppy/" target="_blank">Consulter le projet</ccl-button>
+                                </div>
+                            </div>
+                        </div>-->
                     </div>
+                    <div class="slideButtons">
+                        <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
+                        <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>Formations & Expériences</ccl-button>
+                    </div>
+                </section>
+            </ccl-slide>
+            <ccl-slide id="formation">
+                <div class="background-icons">
+                    <img src="assets/floating-icons/diplome1.png" class="floating-icon icon2" alt="" />
+                    <img src="assets/floating-icons/diplome2.png" class="floating-icon icon3" alt="" />
+                    <img src="assets/floating-icons/diplome3.png" class="floating-icon icon1" alt="" />
+                    <img src="assets/floating-icons/diplome2.png" class="floating-icon icon4 blur" alt="" />
+                    <img src="assets/floating-icons/diplome1.png" class="floating-icon icon5 blur" alt="" />
+                    <img src="assets/floating-icons/diplome3.png" class="floating-icon icon6 blur" alt="" />
                 </div>
-                <div class="slideButtons">
-                    <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
-                    <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>Projets</ccl-button>
-                </div>
-            </div>
-        </ccl-slide>
-        <ccl-slide id="projets">
-            <div class="background-icons">
-                <img src="assets/floating-icons/projet1.png" class="floating-icon icon2" />
-                <img src="assets/floating-icons/projet2.png" class="floating-icon icon3" />
-                <img src="assets/floating-icons/projet3.png" class="floating-icon icon1" />
-                <img src="assets/floating-icons/projet2.png" class="floating-icon icon4 blur" />
-                <img src="assets/floating-icons/projet1.png" class="floating-icon icon5 blur" />
-                <img src="assets/floating-icons/projet3.png" class="floating-icon icon6 blur" />
-            </div>
-            <div class="wrapper">
-                <h1>Mes projets</h1>
-                <div class="mainContent">
-                    <div class="carteProjet">
-                        <div class="carteHeader">
-                            <div class="title">
-                                <h2>Pickr</h2>
-                                <img class="logo" src="assets/projets/logoPickr.png" alt="logo du projet Pickr">
+                <section class="wrapper">
+                    <div class="experienceContent">
+                        <h1>Expériences</h1>
+                        <div class="carteFormation">
+                            <div class="header">
+                                <div class="infoFormation">
+                                    <h2>Développeur Full-Stack - Alternance</h2>
+                                    <p class="ecole">MVP</p>
+                                    <p class="localisation">Grenoble, Isère</p>
+                                </div>
+                                <span class="duree">2024 - 2025</span>
                             </div>
-                            <img class="capture" src="assets/projets/capturePickr.png" alt="image de présentation du projet Pickr">
-                            <div class="listeTechnos">
-                                <span class="techno react">REACT</span>
-                                <span class="techno fullstack">FULLSTACK</span>
-                                <span class="techno api">API</span>
-                                <span class="techno figma">RESPONSIVE DESIGN</span>
-                            </div>
-                        </div>
-                        <div class="carteBody">
-                            <p class="description">Pickr est une application web permettant de rechercher des films et séries selon différents critères. Ce projet m’a permis d’approfondir mon usage de React, d’explorer des concepts clés du développement tels que l’optimisation des requêtes et de la gestion des données, le respect de l’ergonomie, ou encore l’intégration d'API externes.</p>
-                            <div class="links">
-                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right" href="https://touebam.github.io/Pickr/" target="_blank">Consulter le projet</ccl-button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carteProjet enCours">
-                        <div class="carteHeader">
-                            <div class="title">
-                                <h2>Marked</h2>
-                                <img class="logo" src="assets/projets/logoMarked.png" alt="logo du projet Marked">
-                            </div>
-                            <img class="capture" src="assets/projets/captureMarked.png" alt="image de présentation du projet Marked">
-                            <div class="listeTechnos">
-                                <span class="techno react">REACT</span>
-                                <span class="techno typescript">TYPESCRIPT</span>
-                                <span class="techno mongodb">MONGODB</span>
-                                <span class="techno fullstack">FULLSTACK</span>
-                                <span class="techno figma">FIGMA</span>
-                                <span class="techno designsystem">DESIGN SYSTEM</span>
-                            </div>
-                        </div>
-                        <div class="carteBody">
-                            <p class="description">Marked est une application personnelle développée pour organiser efficacement mes onglets en catégories. Ce projet m’a permis de m'introduire à React, TypeScript et de concevoir un design system complet.</p>
-                            <div class="links">
-                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right" href="https://marked-touebam.web.app/" target="_blank">Consulter le projet</ccl-button>
-                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right" href="https://www.figma.com/design/4zMwsTEQBEjA79aJUYWir4/Marked?node-id=0-1&p=f&t=KGKKiVst7s1bBndT-0" target="_blank">Consulter la maquette</ccl-button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carteProjet enCours">
-                        <div class="carteHeader">
-                            <div class="title">
-                                <h2>CC-Lib</h2>
-                                <img class="logo" src="assets/projets/logoCCLib.png" alt="logo du projet CC-Lib">
-                            </div>
-                            <img class="capture" src="assets/projets/captureCCLib.png" alt="image de présentation du projet CC-Lib">
-                            <div class="listeTechnos">
-                                <span class="techno js">JS</span>
-                                <span class="techno css">CSS</span>
-                                <span class="techno html">HTML</span>
-                            </div>
-                        </div>
-                        <div class="carteBody">
-                            <p class="description">CC-Lib est une bibliothèque de composants que je développe en autonomie afin de m'aider dans la conception de mes projets. Certains composants sont notamment utilisés pour la conception de ce portfolio.</p>
-                            <div class="links">
-                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right" href="https://github.com/touebam/CC-Lib" target="_blank">Consulter le projet</ccl-button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carteProjet">
-                        <div class="carteHeader">
-                            <div class="title">
-                                <h2>Terraforma</h2>
-                                <img class="logo" src="assets/projets/logoTerraforma.png" alt="logo du projet Terraforma">
-                            </div>
-                            <img class="capture" src="assets/projets/captureTerraforma.png" alt="image de présentation du projet Terraforma">
-                            <div class="listeTechnos">
-                                <span class="techno js">JS</span>
-                                <span class="techno css">CSS</span>
-                                <span class="techno html">HTML</span>
+                            <p class="description">Développement d'outils internes et d'applications web complètes dans un environnement agile. Participation à toutes les phases du développement, de l'analyse des besoins à la mise en production, en passant par la conception et les tests.</p>
+                            <h3>Technologies utilisées :</h3>
+                            <div class="listeTechnoFormation">
+                                <span class="techno sql">SQL</span>
                                 <span class="techno php">PHP</span>
-                                <span class="techno threejs">Three.js</span>
-                            </div>
-                        </div>
-                        <div class="carteBody">
-                            <p class="description">Projet de 10 semaines réalisé en équipe de 7, visant à créer un jeu éducatif pour des élèves de 3e, avec un espace de gestion pour les enseignants. J’ai conçu les maquettes et développé les interfaces.</p>
-                            <div class="links">
-                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right" href="https://touebam.github.io/TerraForma/view/creationCompte.html" target="_blank">Consulter le projet</ccl-button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carteProjet">
-                        <div class="carteHeader">
-                            <div class="title">
-                                <h2>APPexels</h2>
-                                <img class="logo" src="assets/projets/logoPexels.png" alt="logo du projet APPexels">
-                            </div>
-                            <img class="capture" src="assets/projets/captureAPPexels.png" alt="image de présentation du projet APPexels">
-                            <div class="listeTechnos">
-                                <span class="techno api">API</span>
-                                <span class="techno js">JS</span>
-                                <span class="techno css">CSS</span>
                                 <span class="techno html">HTML</span>
-                            </div>
-                        </div>
-                        <div class="carteBody">
-                            <p class="description">APPexels est une application utilisant l’API Pexels pour rechercher et afficher des images, utilisées comme fonds d’écran. Ce projet m’a permis d’apprendre à exploiter une API et vise à enrichir d’autres apps comme Marked avec des options de personnalisation.</p>
-                            <div class="links">
-                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right">Consulter le projet</ccl-button>
-                            </div>
-                        </div>
-                    </div>
-                    <!--
-                    <div class="carteProjet">
-                        <div class="carteHeader">
-                            <div class="title">
-                                <h2>Lovey Puppy</h2>
-                                <img class="logo" src="assets/projets/logoLoveyPuppy.png" alt="logo du projet Lovey Puppy">
-                            </div>
-                            <img class="capture" src="assets/projets/captureLoveyPuppy.png" alt="image de présentation du projet Lovey Puppy">
-                            <div class="listeTechnos">
-                                <span class="techno js">JS</span>
                                 <span class="techno css">CSS</span>
-                                <span class="techno html">HTML</span>
+                                <span class="techno js">JS</span>
                             </div>
-                        </div>
-                        <div class="carteBody">
-                            <p class="description">Cet exercice consistait à créer le site d'une entreprise fictive dirigée par d'autres groupes d'élèves. L'objectif était ainsi d'apprendre à suivre et écouter les différents besoins et remarques de notre clients.</p>
-                            <div class="links">
-                                <ccl-button size="small" icon="fa-arrow-right" icon-position="right" href="https://touebam.github.io/Lovey-Puppy/" target="_blank">Consulter le projet</ccl-button>
-                            </div>
-                        </div>
-                    </div>-->
-                </div>
-                <div class="slideButtons">
-                    <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
-                    <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>Formations & Expériences</ccl-button>
-                </div>
-            </div>
-        </ccl-slide>
-        <ccl-slide id="formation">
-            <div class="background-icons">
-                <img src="assets/floating-icons/diplome1.png" class="floating-icon icon2" />
-                <img src="assets/floating-icons/diplome2.png" class="floating-icon icon3" />
-                <img src="assets/floating-icons/diplome3.png" class="floating-icon icon1" />
-                <img src="assets/floating-icons/diplome2.png" class="floating-icon icon4 blur" />
-                <img src="assets/floating-icons/diplome1.png" class="floating-icon icon5 blur" />
-                <img src="assets/floating-icons/diplome3.png" class="floating-icon icon6 blur" />
-            </div>
-            <div class="wrapper">
-                <div class="experienceContent">
-                    <h1>Expériences</h1>
-                    <div class="carteFormation">
-                        <div class="header">
-                            <div class="infoFormation">
-                                <h2>Développeur Full-Stack - Alternance</h2>
-                                <p class="ecole">MVP</p>
-                                <p class="localisation">Grenoble, Isère</p>
-                            </div>
-                            <span class="duree">2024 - 2025</span>
-                        </div>
-                        <p class="description">Développement d'outils internes et d'applications web complètes dans un environnement agile. Participation à toutes les phases du développement, de l'analyse des besoins à la mise en production, en passant par la conception et les tests.</p>
-                        <h3>Technologies utilisées :</h3>
-                        <div class="listeTechnoFormation">
-                            <span class="techno sql">SQL</span>
-                            <span class="techno php">PHP</span>
-                            <span class="techno html">HTML</span>
-                            <span class="techno css">CSS</span>
-                            <span class="techno js">JS</span>
                         </div>
                     </div>
-                </div>
-                <div class="formationContent">
-                    <h1>Formations</h1>
-                    <div class="carteFormation">
-                        <div class="header">
-                            <div class="infoFormation">
-                                <h2>BUT Informatique - Parcours réalisation d'applications</h2>
-                                <p class="ecole">IUT2 Grenoble</p>
-                                <p class="localisation">Grenoble, Isère</p>
-                            </div>
-                            <span class="duree">2022-2025</span>
-                        </div>
-                        <p class="description">Formation complète en informatique couvrant le développement logiciel, les bases de données, les réseaux et la gestion de projet. Spécialisation en développement d'applications avec une approche pratique et des projets concrets.</p>
-                        <h3>Technologies utilisées :</h3>
-                        <div class="listeTechnoFormation">
-                            <span class="techno react">Programmation orientée objet</span>
-                            <span class="techno typescript">Développement web</span>
-                            <span class="techno mongodb">Bases de données</span>
-                            <span class="techno fullstack">Algorithmique</span>
-                            <span class="techno figma">Gestion de projet</span>
-                        </div>
-                    </div>
-                    <div class="carteFormation">
-                        <div class="header">
-                            <div class="infoFormation">
-                                <h2>BTS CPI - Conception de Produits Industriels</h2>
-                                <p class="ecole">Lycée Arbez Carme</p>
-                                <p class="localisation">Bellignat, Ain</p>
-                            </div>
-                            <span class="duree">2020 - 2022</span>
-                        </div>
-                        <p class="description">Formation en conception et développement de produits industriels. Cette expérience m'a apporté une approche méthodique de la résolution de problèmes et une sensibilité au design, compétences que j'applique aujourd'hui dans le développement web.</p>
-                        <h3>Compétences transférables :</h3>
-                        <div class="listeTechnoFormation">
-                            <span class="techno designsystem">Méthodologie de projet</span>
-                            <span class="techno js">Analyse fonctionnelle</span>
-                            <span class="techno css">Esprit critique</span>
-                        </div>
-                    </div>
-                    <div class="carteFormation">
-                        <div class="header">
-                            <div class="infoFormation">
-                                <h2>Bac STI2D - Sciences et Technologies Industrielles</h2>
-                                <p class="ecole">Lycée Arbez Carme</p>
-                                <p class="localisation">Bellignat, Ain</p>
-                            </div>
-                            <span class="duree">2017 - 2019</span>
-                        </div>
-                        <p class="description">Spécialité Systèmes d'Information et Numérique (SIN). Première approche du développement et des systèmes informatiques qui m'a donné envie de poursuivre dans cette voie.</p>
-                        <h3>Premières bases :</h3>
-                        <div class="listeTechnoFormation">
-                            <span class="techno css">Programmation Web</span>
-                            <span class="techno html">Logique de programmation</span>
-                            <span class="techno php">Systèmes numériques</span>
-                            <span class="techno sql">Systèmes embarqués</span>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="slideButtons">
-                    <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
-                    <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>Contact</ccl-button>
-                </div>
-            </div>
-        </ccl-slide>
-        <ccl-slide id="contact">
-            <div class="background-icons">
-                <img src="assets/floating-icons/contact1.png" class="floating-icon icon2" />
-                <img src="assets/floating-icons/contact2.png" class="floating-icon icon3" />
-                <img src="assets/floating-icons/contact3.png" class="floating-icon icon1" />
-                <img src="assets/floating-icons/contact2.png" class="floating-icon icon4 blur" />
-                <img src="assets/floating-icons/contact1.png" class="floating-icon icon5 blur" />
-                <img src="assets/floating-icons/contact3.png" class="floating-icon icon6 blur" />
-            </div>
-            <div class="wrapper">
-                <h1></h1>
-                <div class="mainContent">
-                    <div class="sectionLeft">
-                        <h1>Parlons de votre projet</h1>
-                        <p>Que ce soit pour discuter d'une opportunité, échanger sur un projet ou simplement faire connaissance, je serais ravi d'échanger avec vous !</p>
-                        
-                        <div class="carteContactContainer">
-                            <div class="carteContact">
-                                <i class="fa-solid fa-at"></i>
-                                <div class="contactContainer">
-                                    <p class="title">E-mail</p>
-                                    <p class="content">touebamorgan@gmail.com</p>
+                    <div class="formationContent">
+                        <h1>Formations</h1>
+                        <div class="carteFormation">
+                            <div class="header">
+                                <div class="infoFormation">
+                                    <h2>BUT Informatique - Parcours réalisation d'applications</h2>
+                                    <p class="ecole">IUT2 Grenoble</p>
+                                    <p class="localisation">Grenoble, Isère</p>
                                 </div>
+                                <span class="duree">2022-2025</span>
                             </div>
-                            <div class="carteContact">
-                                <i class="fa-solid fa-phone"></i>
-                                <div class="contactContainer">
-                                    <p class="title">Téléphone</p>
-                                    <p class="content">+33 6 43 55 94 80</p>
-                                </div>
-                            </div>
-                            <div class="carteContact">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <div class="contactContainer">
-                                    <p class="title">Localisation</p>
-                                    <p class="content">Grenoble, Isère</p>
-                                </div>
+                            <p class="description">Formation complète en informatique couvrant le développement logiciel, les bases de données, les réseaux et la gestion de projet. Spécialisation en développement d'applications avec une approche pratique et des projets concrets.</p>
+                            <h3>Technologies utilisées :</h3>
+                            <div class="listeTechnoFormation">
+                                <span class="techno react">Programmation orientée objet</span>
+                                <span class="techno typescript">Développement web</span>
+                                <span class="techno mongodb">Bases de données</span>
+                                <span class="techno fullstack">Algorithmique</span>
+                                <span class="techno figma">Gestion de projet</span>
                             </div>
                         </div>
-                        <div class="links">
-                            <ccl-button size="medium" type="secondary" icon="fa-brands fa-github" href="https://github.com/touebam" target="_blank"></ccl-button>
-                            <ccl-button size="medium" type="secondary" icon="fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/morgan-toueba-1aa38b372/" target="_blank"></ccl-button>
+                        <div class="carteFormation">
+                            <div class="header">
+                                <div class="infoFormation">
+                                    <h2>BTS CPI - Conception de Produits Industriels</h2>
+                                    <p class="ecole">Lycée Arbez Carme</p>
+                                    <p class="localisation">Bellignat, Ain</p>
+                                </div>
+                                <span class="duree">2020 - 2022</span>
+                            </div>
+                            <p class="description">Formation en conception et développement de produits industriels. Cette expérience m'a apporté une approche méthodique de la résolution de problèmes et une sensibilité au design, compétences que j'applique aujourd'hui dans le développement web.</p>
+                            <h3>Compétences transférables :</h3>
+                            <div class="listeTechnoFormation">
+                                <span class="techno designsystem">Méthodologie de projet</span>
+                                <span class="techno js">Analyse fonctionnelle</span>
+                                <span class="techno css">Esprit critique</span>
+                            </div>
+                        </div>
+                        <div class="carteFormation">
+                            <div class="header">
+                                <div class="infoFormation">
+                                    <h2>Bac STI2D - Sciences et Technologies Industrielles</h2>
+                                    <p class="ecole">Lycée Arbez Carme</p>
+                                    <p class="localisation">Bellignat, Ain</p>
+                                </div>
+                                <span class="duree">2017 - 2019</span>
+                            </div>
+                            <p class="description">Spécialité Systèmes d'Information et Numérique (SIN). Première approche du développement et des systèmes informatiques qui m'a donné envie de poursuivre dans cette voie.</p>
+                            <h3>Premières bases :</h3>
+                            <div class="listeTechnoFormation">
+                                <span class="techno css">Programmation Web</span>
+                                <span class="techno html">Logique de programmation</span>
+                                <span class="techno php">Systèmes numériques</span>
+                                <span class="techno sql">Systèmes embarqués</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="sectionRight">
-                        <h1>Envoyez-moi un message</h1>
-                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                            <input type="hidden" name="access_key" value="4b78836e-9d3c-42c3-a852-32952720c9f3">
-                            <div class="infoContact">
-                                <ccl-input required name="name" placeholder="Nom" icon="fa-user"></ccl-input>
-                                <ccl-input required name="email" type="mail" placeholder="E-mail" icon="fa-at"></ccl-input>
-                            </div>
-                            <ccl-input required name="subject" placeholder="Sujet"></ccl-input>
-                            <ccl-input required name="message" type="textarea" placeholder="Message"></ccl-input>
-                            <ccl-button icon="fa-paper-plane" icon-position="right" event="contactSubmit()">Envoyer</ccl-button>
+                    <div class="slideButtons">
+                        <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
+                        <ccl-button class="slide-next" type="text" icon="fa-arrow-down" icon-position="right" color='{"hover-background":"var(--COLOR-BG-DARK)"}'>Contact</ccl-button>
+                    </div>
+                </section>
+            </ccl-slide>
+            <ccl-slide id="contact">
+                <div class="background-icons">
+                    <img src="assets/floating-icons/contact1.png" class="floating-icon icon2" alt="" />
+                    <img src="assets/floating-icons/contact2.png" class="floating-icon icon3" alt="" />
+                    <img src="assets/floating-icons/contact3.png" class="floating-icon icon1" alt="" />
+                    <img src="assets/floating-icons/contact2.png" class="floating-icon icon4 blur" alt="" />
+                    <img src="assets/floating-icons/contact1.png" class="floating-icon icon5 blur" alt="" />
+                    <img src="assets/floating-icons/contact3.png" class="floating-icon icon6 blur" alt="" />
+                </div>
+                <section class="wrapper">
+                    <span class="empty"></span>
+                    <div class="mainContent">
+                        <div class="sectionLeft">
+                            <h1>Parlons de votre projet</h1>
+                            <p>Que ce soit pour discuter d'une opportunité, échanger sur un projet ou simplement faire connaissance, je serais ravi d'échanger avec vous !</p>
                             
-                            <input type="hidden" name="name" />
-                            <input type="hidden" name="email" />
-                            <input type="hidden" name="subject" />
-                            <input type="hidden" name="message" />
-                        </form>  
-                    </div>
-                </div>
-                <div class="slideButtons">
-                    <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
-                </div>
-            </div>
-        </ccl-slide>
+                            <div class="carteContactContainer">
+                                <div class="carteContact">
+                                    <i class="fa-solid fa-at"></i>
+                                    <div class="contactContainer">
+                                        <p class="title">E-mail</p>
+                                        <p class="content">touebamorgan@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="carteContact">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <div class="contactContainer">
+                                        <p class="title">Téléphone</p>
+                                        <p class="content">+33 6 43 55 94 80</p>
+                                    </div>
+                                </div>
+                                <div class="carteContact">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <div class="contactContainer">
+                                        <p class="title">Localisation</p>
+                                        <p class="content">Grenoble, Isère</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="links">
+                                <ccl-button size="medium" type="secondary" icon="fa-brands fa-github" href="https://github.com/touebam" target="_blank"></ccl-button>
+                                <ccl-button size="medium" type="secondary" icon="fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/morgan-toueba-1aa38b372/" target="_blank"></ccl-button>
+                            </div>
+                        </div>
 
-    </ccl-slideshow>
+                        <div class="sectionRight">
+                            <h1>Envoyez-moi un message</h1>
+                            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="4b78836e-9d3c-42c3-a852-32952720c9f3">
+                                <div class="infoContact">
+                                    <ccl-input required name="name" placeholder="Nom" icon="fa-user" ></ccl-input>
+                                    <ccl-input required name="email" type="mail" placeholder="E-mail" icon="fa-at"></ccl-input>
+                                </div>
+                                <ccl-input required name="subject" placeholder="Sujet"></ccl-input>
+                                <ccl-input required name="message" type="textarea" placeholder="Message"></ccl-input>
+                                <ccl-button icon="fa-paper-plane" icon-position="right" event="contactSubmit()">Envoyer</ccl-button>
+                                
+                                <input type="hidden" name="name" />
+                                <input type="hidden" name="email" />
+                                <input type="hidden" name="subject" />
+                                <input type="hidden" name="message" />
+                            </form>  
+                        </div>
+                    </div>
+                    <div class="slideButtons">
+                        <ccl-button class="slide-previous" type="text" icon="fa-arrow-up" color='{"hover-background":"var(--COLOR-BG-DARK)"}'></ccl-button>
+                    </div>
+                </section>
+            </ccl-slide>
+        </ccl-slideshow>
+    </main>
 </body>
 </html>
