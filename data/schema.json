@@ -60,26 +60,6 @@
       "location": "Bellignat, Ain"
     },
     {
-      "@type": "JobPosting",
-      "title": "Développeur Full-Stack - Alternance",
-      "hiringOrganization": {
-        "@type": "Organization",
-        "name": "MVP"
-      },
-      "jobLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Grenoble",
-          "addressRegion": "Isère",
-          "addressCountry": "FR"
-        }
-      },
-      "startDate": "2024",
-      "endDate": "2025",
-      "description": "Développement d'outils internes et d'applications web complètes dans un environnement agile. Participation à toutes les phases du développement, de l'analyse des besoins à la mise en production."
-    },
-    {
       "@type": "CreativeWork",
       "name": "Pickr",
       "url": "https://touebam.github.io/Pickr/",
